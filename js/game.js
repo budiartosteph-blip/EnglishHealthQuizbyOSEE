@@ -1,6 +1,6 @@
 /**
  * EnglishHealthQuizbyOSEE - GAMEPLAY CONTROLLER
- * Manages game state, timer, lifelines, scoring, and UI animations.
+ * Manages game state, dynamic question randomization, shuffled options, timer, lifelines, scoring, and UI animations.
  */
 
 class HealthMillionaireGame {
@@ -11,9 +11,10 @@ class HealthMillionaireGame {
     this.currentTime = this.timeLimit;
     this.timerId = null;
     this.isAnswering = false;
-    this.isSwitched = false;
     this.eliminatedOptions = [];
     this.securedPrize = "Rp 0";
+    this.currentQuestionIndex = null;
+    this.usedQuestions = {};
     
     this.lifelines = {
       fifty: true,
@@ -144,7 +145,11 @@ class HealthMillionaireGame {
   restartGameState() {
     this.currentLevel = 1;
     this.securedPrize = "Rp 0";
-    this.isSwitched = false;
+    this.currentQuestionIndex = null;
+    this.usedQuestions = {};
+    for (let lvl = 1; lvl <= this.totalLevels; lvl++) {
+      this.usedQuestions[lvl] = [];
+    }
     this.lifelines = { fifty: true, audience: true, phone: true, switch: true };
     
     // Reset lifeline button states
@@ -156,16 +161,63 @@ class HealthMillionaireGame {
     this.updateSecuredPrizeBadge();
   }
 
-  loadQuestion() {
+  loadQuestion(isSwitch = false) {
     this.isAnswering = false;
     this.eliminatedOptions = [];
-    const qData = QUESTION_BANK[this.currentLevel];
-    this.currentQuestion = this.isSwitched ? qData.alternate : qData.primary;
+    const qTier = QUESTION_BANK[this.currentLevel];
+    const pool = qTier.questions;
+
+    if (!this.usedQuestions[this.currentLevel]) {
+      this.usedQuestions[this.currentLevel] = [];
+    }
+
+    // Filter available indices not yet used in this level
+    let available = pool.map((_, i) => i).filter(i => !this.usedQuestions[this.currentLevel].includes(i));
+    
+    // If pool exhausted or switching with few questions, reset used array
+    if (available.length === 0) {
+      this.usedQuestions[this.currentLevel] = [];
+      available = pool.map((_, i) => i);
+      if (isSwitch && this.currentQuestionIndex !== null && pool.length > 1) {
+        available = available.filter(i => i !== this.currentQuestionIndex);
+      }
+    }
+
+    // Randomly pick one question index from available
+    const chosenIndex = available[Math.floor(Math.random() * available.length)];
+    this.usedQuestions[this.currentLevel].push(chosenIndex);
+    this.currentQuestionIndex = chosenIndex;
+
+    const rawQuestion = pool[chosenIndex];
+
+    // Randomize option order (A, B, C, D) dynamically
+    const optionPairs = rawQuestion.options.map((optText, origIdx) => ({
+      text: optText,
+      isCorrect: origIdx === rawQuestion.answer
+    }));
+
+    // Fisher-Yates shuffle
+    for (let i = optionPairs.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [optionPairs[i], optionPairs[j]] = [optionPairs[j], optionPairs[i]];
+    }
+
+    const shuffledOptions = optionPairs.map(item => item.text);
+    const newAnswerIndex = optionPairs.findIndex(item => item.isCorrect);
+
+    this.currentQuestion = {
+      category: rawQuestion.category,
+      question: rawQuestion.question,
+      options: shuffledOptions,
+      answer: newAnswerIndex,
+      explanation: rawQuestion.explanation,
+      pearl: rawQuestion.pearl
+    };
 
     // Update UI headers
     this.categoryBadge.innerText = this.currentQuestion.category;
     this.questionText.innerText = this.currentQuestion.question;
-    this.currentPrizeDisplay.innerText = qData.prize;
+    this.currentPrizeDisplay.innerText = qTier.prize;
 
     // Reset option buttons
     const letters = ["A", "B", "C", "D"];
@@ -291,8 +343,7 @@ class HealthMillionaireGame {
     Sound.playClick();
     this.pearlModal.classList.add("hidden");
     this.currentLevel++;
-    this.isSwitched = false;
-    this.loadQuestion();
+    this.loadQuestion(false);
   }
 
   updateSecuredPrizeBadge() {
@@ -387,17 +438,17 @@ class HealthMillionaireGame {
       <div class="text-center mb-5">
         <div class="text-3xl mb-2">📊</div>
         <h3 class="text-lg font-bold text-amber-400">Clinical Consensus / Colleague Poll</h3>
-        <p class="text-xs text-slate-400">Percentage distribution from a survey of 100 healthcare professionals & peers</p>
+        <p class="text-xs text-blue-200">Percentage distribution from a survey of 100 healthcare professionals & peers</p>
       </div>
       <div class="space-y-3">
         ${["A", "B", "C", "D"].map((letter, i) => `
           <div>
             <div class="flex justify-between text-xs font-semibold mb-1">
               <span class="text-slate-200">Option (${letter})</span>
-              <span class="${i === correct ? 'text-emerald-400 font-bold' : 'text-slate-400'}">${pcts[i]}%</span>
+              <span class="${i === correct ? 'text-emerald-400 font-bold' : 'text-blue-300'}">${pcts[i]}%</span>
             </div>
-            <div class="w-full bg-slate-800 rounded-full h-3.5 overflow-hidden border border-slate-700">
-              <div class="h-full rounded-full transition-all duration-1000 ${i === correct ? 'bg-gradient-to-r from-emerald-500 to-teal-400' : 'bg-gradient-to-r from-blue-600 to-indigo-500'}" style="width: ${pcts[i]}%"></div>
+            <div class="w-full bg-[#020A24] rounded-full h-3.5 overflow-hidden border border-[#1D5CFA]/40">
+              <div class="h-full rounded-full transition-all duration-1000 ${i === correct ? 'bg-gradient-to-r from-emerald-500 to-teal-400 shadow-md' : 'bg-gradient-to-r from-blue-600 to-indigo-500'}" style="width: ${pcts[i]}%"></div>
             </div>
           </div>
         `).join('')}
@@ -425,10 +476,10 @@ class HealthMillionaireGame {
         <h3 class="text-base font-bold text-emerald-400">Tele-Consultation: Medical Specialist</h3>
         <p class="text-xs text-amber-400 font-semibold">${specialist.name}</p>
       </div>
-      <div class="bg-slate-900/90 border border-slate-700 p-4 rounded-xl text-slate-200 text-sm leading-relaxed shadow-inner">
+      <div class="bg-[#020A24]/90 border border-[#1D5CFA]/40 p-4 rounded-xl text-slate-100 text-sm leading-relaxed shadow-inner">
         <p class="italic">"${advice}"</p>
       </div>
-      <p class="text-[11px] text-slate-500 text-center mt-3">*This advice reflects the specialist's clinical opinion; the final lock decision rests solely with you.</p>
+      <p class="text-[11px] text-blue-300/80 text-center mt-3">*This advice reflects the specialist's clinical opinion; the final lock decision rests solely with you.</p>
     `;
 
     this.lifelineModal.classList.remove("hidden");
@@ -441,8 +492,8 @@ class HealthMillionaireGame {
     this.btnSwitch.classList.add("opacity-30", "cursor-not-allowed", "filter", "grayscale");
     Sound.playLifeline();
 
-    this.isSwitched = true;
-    this.loadQuestion();
+    // Dynamically draw another random question from this tier's pool
+    this.loadQuestion(true);
   }
 
   closeLifelineModal() {
