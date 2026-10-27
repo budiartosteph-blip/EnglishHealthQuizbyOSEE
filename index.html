@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="id" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Who Wants to Be a Health Millionaire? | Kuis Miliarder Kesehatan</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Canvas Confetti CDN for Grand Prize -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="css/style.css">
+  
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            studio: {
+              900: '#050814',
+              800: '#0A1128',
+              700: '#132247',
+              600: '#1D3574',
+              border: '#1E3A8A'
+            }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="studio-spotlight min-h-screen flex flex-col justify-between selection:bg-amber-500 selection:text-black">
+
+  <!-- ================= TOP NAVIGATION BAR ================= -->
+  <header class="w-full border-b border-blue-900/40 bg-slate-950/80 backdrop-blur-md sticky top-0 z-40 px-4 py-3">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      
+      <!-- Brand Logo -->
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-blue-700 via-indigo-600 to-amber-400 p-0.5 shadow-lg shadow-blue-500/30 flex items-center justify-center">
+          <div class="w-full h-full bg-slate-950 rounded-[10px] flex items-center justify-center text-xl">
+            🩺
+          </div>
+        </div>
+        <div>
+          <h1 class="text-sm md:text-base font-extrabold tracking-wider font-orbitron bg-gradient-to-r from-amber-300 via-yellow-200 to-amber-500 bg-clip-text text-transparent">
+            HEALTH MILLIONAIRE
+          </h1>
+          <p class="text-[10px] md:text-xs text-blue-300 font-medium">Kuis Tantangan Edukasi Medis & Farmasi</p>
+        </div>
+      </div>
+
+      <!-- Quick Actions -->
+      <div class="flex items-center gap-2">
+        <button id="btn-mute" title="Matikan/Aktifkan Suara" class="p-2 rounded-xl bg-slate-900/80 border border-slate-700/60 hover:border-slate-500 transition-all text-slate-300">
+          <svg class="w-5 h-5 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072M17.536 6.464a7 7 0 010 9.072M9 19V5l-4 4H1v6h4l4 4z"/></svg>
+        </button>
+        <button id="btn-walk-away" title="Bawa Pulang Hadiah Saat Ini" class="text-xs px-3 py-1.5 rounded-xl bg-rose-950/60 border border-rose-800/60 text-rose-300 hover:bg-rose-900/70 hover:border-rose-500 font-semibold transition-all flex items-center gap-1.5">
+          <span>🛑</span>
+          <span class="hidden sm:inline">Amankan Hadiah</span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ================= MAIN GAME WORKSPACE ================= -->
+  <main class="flex-1 max-w-7xl w-full mx-auto p-4 md:p-6 flex flex-col justify-center">
+    
+    <!-- START / INTRO SCREEN -->
+    <div id="start-screen" class="max-w-3xl mx-auto w-full text-center py-8 px-6 rounded-3xl bg-slate-900/70 border border-blue-900/60 backdrop-blur-xl shadow-2xl relative overflow-hidden">
+      <div class="absolute -top-24 -left-24 w-60 h-60 bg-blue-600/20 rounded-full blur-3xl pointer-events-none"></div>
+      <div class="absolute -bottom-24 -right-24 w-60 h-60 bg-amber-500/20 rounded-full blur-3xl pointer-events-none"></div>
+
+      <div class="w-20 h-20 mx-auto mb-6 rounded-2xl bg-gradient-to-tr from-amber-500 to-yellow-300 p-1 shadow-2xl shadow-amber-500/30 flex items-center justify-center animate-pulse">
+        <div class="w-full h-full bg-slate-950 rounded-[14px] flex items-center justify-center text-4xl">
+          🏆
+        </div>
+      </div>
+
+      <h2 class="text-2xl md:text-4xl font-black font-orbitron text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-yellow-100 to-amber-400 mb-3 tracking-wide">
+        WHO WANTS TO BE A HEALTH MILLIONAIRE?
+      </h2>
+      <p class="text-sm md:text-base text-blue-200/90 max-w-xl mx-auto mb-8 leading-relaxed">
+        Uji ketajaman wawasan kesehatan, farmasi, tanda vital, dan regulasi klinis Anda dalam 15 tangga soal menuju hadiah virtual <span class="text-amber-400 font-bold">Rp 1.000.000.000</span>!
+      </p>
+
+      <!-- Key Mechanics Feature Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-3.5 mb-8 text-left">
+        <div class="p-3.5 rounded-2xl bg-slate-950/60 border border-blue-900/50">
+          <div class="text-xl mb-1.5">🪜</div>
+          <h4 class="text-xs font-bold text-slate-100 mb-1">15 Tangga Berjenjang</h4>
+          <p class="text-[11px] text-slate-400">Dari edukasi masyarakat, farmakoterapi apotek, hingga regulasi CDOB BPOM & onkologi.</p>
+        </div>
+        <div class="p-3.5 rounded-2xl bg-slate-950/60 border border-blue-900/50">
+          <div class="text-xl mb-1.5">🛡️</div>
+          <h4 class="text-xs font-bold text-slate-100 mb-1">2 Checkpoint Aman</h4>
+          <p class="text-[11px] text-slate-400">Amankan hadiah di Level 5 (Rp 1 Juta) & Level 10 (Rp 32 Juta). Tak akan pulang tangan hampa!</p>
+        </div>
+        <div class="p-3.5 rounded-2xl bg-slate-950/60 border border-blue-900/50">
+          <div class="text-xl mb-1.5">🩺</div>
+          <h4 class="text-xs font-bold text-slate-100 mb-1">4 Bantuan Medis</h4>
+          <p class="text-[11px] text-slate-400">Gunakan Uji Lab 50:50, Konsensus Nakes, Telepon Spesialis, dan Rujuk Kasus Baru.</p>
+        </div>
+      </div>
+
+      <button id="btn-start" class="font-orbitron font-bold text-base md:text-lg px-8 py-4 rounded-2xl bg-gradient-to-r from-amber-500 via-yellow-400 to-amber-500 text-slate-950 hover:brightness-110 shadow-lg shadow-amber-500/40 hover:scale-[1.02] active:scale-95 transition-all">
+        MULAI TANTANGAN SEKARANG ➜
+      </button>
+    </div>
+
+    <!-- ACTIVE GAME SCREEN -->
+    <div id="game-screen" class="hidden grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+      
+      <!-- LEFT/CENTER: QUESTION & GAMEPLAY (8 Cols) -->
+      <div class="lg:col-span-8 flex flex-col justify-between gap-6">
+
+        <!-- Top Dashboard Status Bar -->
+        <div class="flex items-center justify-between bg-slate-950/70 border border-blue-900/50 p-4 rounded-2xl backdrop-blur-md">
+          
+          <!-- Category & Level -->
+          <div>
+            <span id="category-badge" class="inline-block px-3 py-1 rounded-full bg-blue-950/80 border border-blue-500/40 text-[11px] font-semibold text-blue-300 uppercase tracking-wider mb-1">
+              Kategori Medis
+            </span>
+            <div class="flex items-center gap-2">
+              <span class="text-xs text-slate-400 font-medium">Nilai Soal:</span>
+              <span id="current-prize-display" class="text-sm md:text-base font-orbitron font-extrabold text-amber-400 text-glow-gold">
+                Rp 100.000
+              </span>
+            </div>
+          </div>
+
+          <!-- Circular Suspense Timer -->
+          <div class="flex items-center gap-3">
+            <div id="timer-circle" class="w-14 h-14 rounded-full border-2 border-cyan-400 flex items-center justify-center bg-slate-900/80 shadow-lg shadow-cyan-500/30 transition-all">
+              <span id="timer-display" class="text-2xl font-black font-orbitron text-cyan-300">45</span>
+            </div>
+          </div>
+
+          <!-- Secured Safe Haven Money -->
+          <div class="text-right">
+            <span class="text-[10px] uppercase font-semibold text-slate-400 block tracking-wider">Hadiah Aman</span>
+            <span id="secured-prize-display" class="text-sm md:text-base font-orbitron font-bold text-emerald-400">
+              Rp 0
+            </span>
+          </div>
+
+        </div>
+
+        <!-- 4 Health Lifelines Bar -->
+        <div class="grid grid-cols-4 gap-2 md:gap-3 bg-slate-950/60 p-2.5 rounded-2xl border border-blue-900/40">
+          <button id="life-fifty" title="50:50 (Eliminasi 2 Jawaban Salah)" class="py-2.5 px-2 rounded-xl bg-slate-900/90 border border-blue-700/60 hover:border-cyan-400 hover:bg-blue-900/40 transition-all flex flex-col items-center justify-center group">
+            <span class="text-lg md:text-xl group-hover:scale-110 transition-transform">🧪</span>
+            <span class="text-[10px] md:text-xs font-bold font-orbitron text-blue-200 mt-0.5">50:50</span>
+          </button>
+          
+          <button id="life-audience" title="Konsensus Nakes (Survei Audiens)" class="py-2.5 px-2 rounded-xl bg-slate-900/90 border border-blue-700/60 hover:border-cyan-400 hover:bg-blue-900/40 transition-all flex flex-col items-center justify-center group">
+            <span class="text-lg md:text-xl group-hover:scale-110 transition-transform">📊</span>
+            <span class="text-[10px] md:text-xs font-bold font-orbitron text-blue-200 mt-0.5">KONSENSUS</span>
+          </button>
+
+          <button id="life-phone" title="Telepon Spesialis (Konsultasi Dokter/Apoteker)" class="py-2.5 px-2 rounded-xl bg-slate-900/90 border border-blue-700/60 hover:border-cyan-400 hover:bg-blue-900/40 transition-all flex flex-col items-center justify-center group">
+            <span class="text-lg md:text-xl group-hover:scale-110 transition-transform">🩺</span>
+            <span class="text-[10px] md:text-xs font-bold font-orbitron text-blue-200 mt-0.5">SPESIALIS</span>
+          </button>
+
+          <button id="life-switch" title="Rujuk Kasus (Ganti Pertanyaan Baru)" class="py-2.5 px-2 rounded-xl bg-slate-900/90 border border-blue-700/60 hover:border-cyan-400 hover:bg-blue-900/40 transition-all flex flex-col items-center justify-center group">
+            <span class="text-lg md:text-xl group-hover:scale-110 transition-transform">🔄</span>
+            <span class="text-[10px] md:text-xs font-bold font-orbitron text-blue-200 mt-0.5">GANTI KASUS</span>
+          </button>
+        </div>
+
+        <!-- Central Question Display Box -->
+        <div class="relative p-6 md:p-8 rounded-3xl bg-gradient-to-b from-slate-900 via-blue-950/80 to-slate-900 border-2 border-blue-600/80 shadow-2xl shadow-blue-900/40 text-center flex items-center justify-center min-h-[140px] md:min-h-[180px]">
+          <p id="question-text" class="text-base md:text-xl font-bold text-slate-100 leading-relaxed max-w-2xl">
+            Memuat pertanyaan medis...
+          </p>
+        </div>
+
+        <!-- 4 Option Buttons (2x2 Grid) -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-3.5">
+          <button id="opt-0" class="lozenge-btn w-full p-4 text-left flex items-center gap-3"></button>
+          <button id="opt-1" class="lozenge-btn w-full p-4 text-left flex items-center gap-3"></button>
+          <button id="opt-2" class="lozenge-btn w-full p-4 text-left flex items-center gap-3"></button>
+          <button id="opt-3" class="lozenge-btn w-full p-4 text-left flex items-center gap-3"></button>
+        </div>
+
+      </div>
+
+      <!-- RIGHT: PRIZE MONEY LADDER (4 Cols) -->
+      <div class="lg:col-span-4 bg-slate-950/80 border border-blue-900/60 rounded-3xl p-4 backdrop-blur-xl shadow-xl flex flex-col justify-between">
+        
+        <div class="flex items-center justify-between border-b border-blue-900/40 pb-3 mb-3">
+          <h3 class="text-xs font-bold font-orbitron tracking-wider text-slate-300 uppercase flex items-center gap-1.5">
+            <span>🪜</span> Tangga Hadiah
+          </h3>
+          <span class="text-[10px] text-amber-400 font-semibold">★ = Titik Aman</span>
+        </div>
+
+        <!-- Ladder Levels 15 down to 1 -->
+        <ul id="ladder-list" class="space-y-1 ladder-scroll max-h-[500px] overflow-y-auto pr-1">
+          <!-- Dynamically populated by game.js -->
+        </ul>
+
+        <!-- Bottom Legend -->
+        <div class="mt-4 pt-3 border-t border-blue-900/30 flex items-center justify-between text-[11px] text-slate-400 font-medium">
+          <span>Safe Zone 1: Rp 1 Jt</span>
+          <span>Safe Zone 2: Rp 32 Jt</span>
+        </div>
+
+      </div>
+
+    </div>
+
+  </main>
+
+  <!-- ================= MODALS & POP-UPS ================= -->
+
+  <!-- 1. CLINICAL PEARL / EDUCATIONAL EXPLANATION MODAL -->
+  <div id="pearl-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-md">
+    <div class="max-w-lg w-full bg-slate-900 border border-emerald-500/60 rounded-3xl p-6 shadow-2xl shadow-emerald-500/20 text-center animate-in fade-in zoom-in duration-300">
+      
+      <div class="w-14 h-14 mx-auto mb-3 rounded-2xl bg-emerald-950/80 border border-emerald-500/40 flex items-center justify-center text-3xl">
+        🎉
+      </div>
+
+      <span id="pearl-level-badge" class="px-3 py-1 rounded-full bg-emerald-950 border border-emerald-500/40 text-emerald-300 font-orbitron font-bold text-xs uppercase tracking-wider inline-block mb-2">
+        Level Selesai
+      </span>
+
+      <h3 class="text-xl font-bold text-slate-100 mb-2">Jawaban Tepat Sekali!</h3>
+      
+      <p id="pearl-explanation" class="text-xs md:text-sm text-slate-300 leading-relaxed mb-4 text-left bg-slate-950/60 p-3.5 rounded-xl border border-slate-800">
+        Penjelasan medis...
+      </p>
+
+      <div class="bg-amber-950/30 border border-amber-500/40 p-3.5 rounded-xl text-left mb-6">
+        <h5 class="text-xs font-bold text-amber-300 flex items-center gap-1.5 mb-1">
+          <span>💡</span> Clinical Pearl (Catatan Klinis):
+        </h5>
+        <p id="pearl-clinical-note" class="text-xs text-amber-200/90 leading-relaxed">
+          Catatan klinis...
+        </p>
+      </div>
+
+      <button id="btn-next-level" class="w-full font-orbitron font-bold py-3.5 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-400 text-slate-950 hover:brightness-110 shadow-lg shadow-emerald-500/30 active:scale-95 transition-all">
+        LANJUT KE SOAL BERIKUTNYA ➜
+      </button>
+
+    </div>
+  </div>
+
+  <!-- 2. LIFELINE POPUP (Audience / Specialist) -->
+  <div id="lifeline-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-md">
+    <div class="max-w-md w-full bg-slate-900 border border-blue-500/50 rounded-3xl p-6 shadow-2xl shadow-blue-500/20 animate-in fade-in zoom-in duration-300">
+      
+      <div id="lifeline-modal-content">
+        <!-- Injected via JavaScript -->
+      </div>
+
+      <button id="btn-close-lifeline" class="w-full mt-6 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold text-xs border border-slate-600 transition-colors">
+        Tutup & Kembali Menjawab
+      </button>
+    </div>
+  </div>
+
+  <!-- 3. GAME OVER MODAL -->
+  <div id="game-over-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/85 backdrop-blur-md">
+    <div class="max-w-md w-full bg-slate-900 border border-rose-500/60 rounded-3xl p-6 shadow-2xl shadow-rose-500/20 text-center animate-in fade-in zoom-in duration-300">
+      
+      <div class="w-14 h-14 mx-auto mb-3 rounded-2xl bg-rose-950/80 border border-rose-500/40 flex items-center justify-center text-3xl">
+        💔
+      </div>
+
+      <h3 class="text-xl font-black font-orbitron text-rose-400 mb-1">PERMAINAN BERAKHIR</h3>
+      <p id="gameover-reason" class="text-xs text-slate-400 mb-4">Jawaban Anda keliru.</p>
+
+      <div class="bg-slate-950/80 border border-slate-800 p-4 rounded-2xl mb-4 text-left space-y-2">
+        <div class="flex justify-between items-center text-xs">
+          <span class="text-slate-400">Hadiah Dibawa Pulang:</span>
+          <span id="gameover-final-prize" class="font-orbitron font-extrabold text-amber-400 text-base">Rp 0</span>
+        </div>
+        <div class="pt-2 border-t border-slate-800 text-xs text-slate-300">
+          <span class="text-emerald-400 font-bold block mb-1">Jawaban yang Benar:</span>
+          <p id="gameover-correct-ans" class="font-semibold text-slate-100"></p>
+        </div>
+      </div>
+
+      <p id="gameover-explanation" class="text-[11px] text-slate-400 text-left mb-6 leading-relaxed bg-slate-950/40 p-3 rounded-xl border border-slate-800/80"></p>
+
+      <button id="btn-restart" class="w-full font-orbitron font-bold py-3.5 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 text-white hover:brightness-110 shadow-lg shadow-blue-500/30 active:scale-95 transition-all">
+        MAIN LAGI DARI LEVEL 1 🔄
+      </button>
+
+    </div>
+  </div>
+
+  <!-- 4. GRAND PRIZE WIN MODAL (Rp 1 Miliar) -->
+  <div id="win-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/90 backdrop-blur-lg">
+    <div class="max-w-lg w-full bg-gradient-to-b from-slate-900 to-slate-950 border-2 border-amber-400 rounded-3xl p-8 text-center shadow-2xl shadow-amber-500/40 animate-in fade-in zoom-in duration-500">
+      
+      <div class="w-24 h-24 mx-auto mb-4 rounded-3xl bg-gradient-to-tr from-amber-500 via-yellow-300 to-amber-600 p-1 shadow-2xl shadow-amber-400/50 flex items-center justify-center animate-bounce">
+        <div class="w-full h-full bg-slate-950 rounded-[20px] flex items-center justify-center text-5xl">
+          👑
+        </div>
+      </div>
+
+      <h2 class="text-2xl md:text-3xl font-black font-orbitron text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-yellow-100 to-amber-400 mb-1">
+        LUAR BIASA! SELAMAT!
+      </h2>
+      <p class="text-sm font-semibold text-amber-300 uppercase tracking-widest font-orbitron mb-4">
+        ANDA ADALAH HEALTH MILLIONAIRE!
+      </p>
+
+      <div class="p-4 rounded-2xl bg-amber-950/40 border border-amber-500/40 mb-6">
+        <span class="text-xs text-amber-200/80 block mb-1">Total Hadiah Tertinggi:</span>
+        <span class="text-3xl md:text-4xl font-black font-orbitron text-amber-400 text-glow-gold">
+          Rp 1.000.000.000
+        </span>
+      </div>
+
+      <p id="win-explanation" class="text-xs text-slate-300 leading-relaxed mb-6 bg-slate-950/60 p-3.5 rounded-xl border border-slate-800 text-left"></p>
+
+      <button id="btn-play-again-win" class="w-full font-orbitron font-bold py-4 rounded-2xl bg-gradient-to-r from-amber-400 via-yellow-300 to-amber-500 text-slate-950 hover:brightness-110 shadow-xl shadow-amber-500/40 active:scale-95 transition-all text-sm md:text-base">
+        MAIN ULANG KUIS 🏆
+      </button>
+
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="w-full border-t border-blue-900/30 py-3 text-center text-xs text-slate-500">
+    <p>Health Millionaire Quiz &copy; 2026 | Dirancang untuk Edukasi Farmasi & Kesehatan Berkelanjutan.</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/audio.js"></script>
+  <script src="js/questions.js"></script>
+  <script src="js/game.js"></script>
+</body>
+</html>
