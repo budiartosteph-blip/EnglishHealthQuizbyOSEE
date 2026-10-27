@@ -191,7 +191,11 @@
         </div>
 
         <!-- Central Question Display Box -->
-        <div class="relative p-6 md:p-8 rounded-3xl bg-gradient-to-b from-[#0E359E] via-[#08216B] to-[#04123E] border-2 border-[#1D5CFA] shadow-2xl shadow-[#0036AD]/50 text-center flex items-center justify-center min-h-[140px] md:min-h-[180px]">
+        <div class="relative p-6 md:p-8 rounded-3xl bg-gradient-to-b from-[#0E359E] via-[#08216B] to-[#04123E] border-2 border-[#1D5CFA] shadow-2xl shadow-[#0036AD]/50 text-center flex flex-col items-center justify-center min-h-[140px] md:min-h-[180px]">
+          <!-- OSEE Brand Pill on Question Display -->
+          <div class="mb-3 px-3.5 py-1.5 rounded-full bg-[#020A24]/90 border border-[#1D5CFA]/50 inline-flex items-center gap-2 shadow-md">
+            <img src="assets/logo_osee_web.png" alt="OSEE.CO.ID" class="h-4 md:h-5 w-auto object-contain">
+          </div>
           <p id="question-text" class="text-base md:text-xl font-bold text-white leading-relaxed max-w-2xl text-shadow">
             Loading clinical question...
           </p>
@@ -240,7 +244,14 @@
   <div id="pearl-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-[#01081C]/85 backdrop-blur-md">
     <div class="max-w-lg w-full bg-[#051A4F] border border-emerald-500/70 rounded-3xl p-6 shadow-2xl shadow-emerald-500/20 text-center animate-in fade-in zoom-in duration-300">
       
-      <div class="w-14 h-14 mx-auto mb-3 rounded-2xl bg-[#020A24] border border-emerald-500/50 flex items-center justify-center text-3xl">
+      <!-- OSEE Logo Header in Modal -->
+      <div class="flex justify-center mb-3">
+        <div class="px-4 py-1.5 rounded-xl bg-[#020A24]/95 border border-emerald-500/50 shadow-md inline-flex items-center gap-2">
+          <img src="assets/logo_osee_web.png" alt="OSEE.CO.ID" class="h-6 w-auto object-contain">
+        </div>
+      </div>
+
+      <div class="w-12 h-12 mx-auto mb-2 rounded-xl bg-[#020A24] border border-emerald-500/50 flex items-center justify-center text-2xl">
         🎉
       </div>
 
@@ -274,6 +285,13 @@
   <div id="lifeline-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-[#01081C]/85 backdrop-blur-md">
     <div class="max-w-md w-full bg-[#051A4F] border border-[#1D5CFA]/70 rounded-3xl p-6 shadow-2xl shadow-[#0036AD]/40 animate-in fade-in zoom-in duration-300">
       
+      <!-- OSEE Logo Header in Modal -->
+      <div class="flex justify-center mb-3">
+        <div class="px-3.5 py-1.5 rounded-xl bg-[#020A24]/95 border border-[#1D5CFA]/50 shadow-md inline-flex items-center gap-2">
+          <img src="assets/logo_osee_web.png" alt="OSEE.CO.ID" class="h-5 w-auto object-contain">
+        </div>
+      </div>
+
       <div id="lifeline-modal-content">
         <!-- Injected via JavaScript -->
       </div>
@@ -288,7 +306,14 @@
   <div id="game-over-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-[#01081C]/90 backdrop-blur-md">
     <div class="max-w-md w-full bg-[#051A4F] border border-rose-500/70 rounded-3xl p-6 shadow-2xl shadow-rose-500/20 text-center animate-in fade-in zoom-in duration-300">
       
-      <div class="w-14 h-14 mx-auto mb-3 rounded-2xl bg-[#020A24] border border-rose-500/50 flex items-center justify-center text-3xl">
+      <!-- OSEE Logo Header in Modal -->
+      <div class="flex justify-center mb-3">
+        <div class="px-4 py-1.5 rounded-xl bg-[#020A24]/95 border border-rose-500/50 shadow-md inline-flex items-center gap-2">
+          <img src="assets/logo_osee_web.png" alt="OSEE.CO.ID" class="h-6 w-auto object-contain">
+        </div>
+      </div>
+
+      <div class="w-12 h-12 mx-auto mb-2 rounded-xl bg-[#020A24] border border-rose-500/50 flex items-center justify-center text-2xl">
         💔
       </div>
 
@@ -319,8 +344,15 @@
   <div id="win-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-[#01081C]/92 backdrop-blur-lg">
     <div class="max-w-lg w-full bg-gradient-to-b from-[#0E359E] via-[#08216B] to-[#030E30] border-2 border-amber-400 rounded-3xl p-8 text-center shadow-2xl shadow-amber-500/40 animate-in fade-in zoom-in duration-500">
       
-      <div class="w-24 h-24 mx-auto mb-4 rounded-3xl bg-gradient-to-tr from-amber-500 via-yellow-300 to-amber-600 p-1 shadow-2xl shadow-amber-400/50 flex items-center justify-center animate-bounce">
-        <div class="w-full h-full bg-[#020A24] rounded-[20px] flex items-center justify-center text-5xl">
+      <!-- OSEE Logo Header in Modal -->
+      <div class="flex justify-center mb-4">
+        <div class="px-5 py-2 rounded-2xl bg-[#020A24]/95 border border-amber-400/60 shadow-xl inline-flex items-center gap-2">
+          <img src="assets/logo_osee_web.png" alt="OSEE.CO.ID" class="h-8 md:h-9 w-auto object-contain">
+        </div>
+      </div>
+
+      <div class="w-20 h-20 mx-auto mb-4 rounded-3xl bg-gradient-to-tr from-amber-500 via-yellow-300 to-amber-600 p-1 shadow-2xl shadow-amber-400/50 flex items-center justify-center animate-bounce">
+        <div class="w-full h-full bg-[#020A24] rounded-[20px] flex items-center justify-center text-4xl">
           👑
         </div>
       </div>
