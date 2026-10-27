@@ -1,121 +1,121 @@
 /**
- * HEALTHQUIZBYOSEE - QUESTION BANK
+ * EnglishHealthQuizbyOSEE - QUESTION BANK
  * Curated and clinically structured questions spanning 15 levels.
  * Each level contains:
  * - primary: main question
- * - alternate: backup question for "Switch Question / Rujuk Kasus" lifeline
+ * - alternate: backup question for "Case Referral / Switch Question" lifeline
  */
 
 const QUESTION_BANK = {
   1: {
-    prize: "Rp 100.000",
+    prize: "Rp 100,000",
     safe: false,
     primary: {
-      category: "Pola Hidup Sehat & Hidrasi",
-      question: "Berapa liter konsumsi air putih harian yang dianjurkan oleh Kementerian Kesehatan RI untuk orang dewasa dengan aktivitas normal?",
+      category: "Healthy Lifestyle & Hydration",
+      question: "How many liters of plain water per day are generally recommended by health authorities (e.g., WHO and MoH) for an average adult with normal physical activity?",
       options: [
-        "Kurang dari 500 mL per hari",
-        "Sekitar 2 Liter (setara 8 gelas) per hari",
-        "Minimal 10 Liter per hari",
-        "Hanya saat merasa tenggorokan kering"
+        "Less than 500 mL per day",
+        "Approximately 2 Liters (about 8 glasses) per day",
+        "At least 10 Liters per day",
+        "Only when experiencing a dry throat"
       ],
       answer: 1,
-      explanation: "Kemenkes RI menganjurkan konsumsi air putih sekitar 2 liter atau setara 8 gelas berukuran 250 mL per hari untuk menjaga hidrasi seluler, fungsi ginjal, dan keseimbangan elektrolit tubuh.",
-      pearl: "Dehidrasi ringan (1-2% defisit cairan) dapat menurunkan konsentrasi kognitif dan kinerja memori hingga 15%."
+      explanation: "Health authorities recommend an average daily water intake of approximately 2 liters (or 8 glasses of 250 mL each) to maintain cellular hydration, renal clearance, and systemic electrolyte balance.",
+      pearl: "Mild dehydration (a 1–2% fluid deficit) can impair cognitive performance, concentration, and working memory by up to 15%."
     },
     alternate: {
-      category: "Fisiologi Dasar",
-      question: "Berapa rentang frekuensi denyut nadi istirahat (resting heart rate) normal pada orang dewasa sehat?",
+      category: "Fundamental Physiology",
+      question: "What is the normal resting heart rate (pulse) range for a healthy adult at rest?",
       options: [
-        "20 - 40 denyut per menit",
-        "60 - 100 denyut per menit",
-        "120 - 160 denyut per menit",
-        "180 - 220 denyut per menit"
+        "20 - 40 beats per minute",
+        "60 - 100 beats per minute",
+        "120 - 160 beats per minute",
+        "180 - 220 beats per minute"
       ],
       answer: 1,
-      explanation: "Denyut jantung istirahat normal pada orang dewasa berkisar antara 60 hingga 100 detak per menit (bpm). Nilai di bawah 60 bpm disebut bradikardia, sedangkan di atas 100 bpm disebut takikardia.",
-      pearl: "Atlet terlatih sering memiliki denyut nadi istirahat 40-50 bpm karena efisiensi volume sekuncup jantung yang sangat tinggi."
+      explanation: "A normal resting heart rate for adults ranges from 60 to 100 beats per minute (bpm). A rate below 60 bpm is termed bradycardia, whereas a rate exceeding 100 bpm is termed tachycardia.",
+      pearl: "Endurance-trained athletes frequently exhibit resting pulse rates of 40–50 bpm due to high stroke volume efficiency and elevated vagal tone."
     }
   },
   2: {
-    prize: "Rp 200.000",
+    prize: "Rp 200,000",
     safe: false,
     primary: {
-      category: "Biokimia & Nutrisi Klinis",
-      question: "Di antara pilihan berikut, manakah kelompok vitamin yang tergolong LARUT DALAM LEMAK sehingga disimpan di jaringan adiposa dan hepar?",
+      category: "Clinical Nutrition & Biochemistry",
+      question: "Which group of vitamins is FAT-SOLUBLE, meaning they are absorbed alongside dietary lipids and stored in hepatic and adipose tissues?",
       options: [
-        "Vitamin B Kompleks dan Vitamin C",
-        "Vitamin B1, B6, dan B12",
-        "Vitamin A, D, E, dan K",
-        "Vitamin C dan Vitamin P"
+        "Vitamin B-Complex and Vitamin C",
+        "Vitamins B1, B6, and B12",
+        "Vitamins A, D, E, and K",
+        "Vitamin C and Vitamin P"
       ],
       answer: 2,
-      explanation: "Vitamin ADEK larut dalam lemak dan diserap bersama lipid makanan, lalu disimpan dalam hepar dan jaringan lemak. Sebaliknya, Vitamin B dan C larut dalam air sehingga kelebihannya diekskresikan melalui urine.",
-      pearl: "Karena disimpan dalam tubuh, konsumsi berlebih vitamin ADEK (terutama Vitamin A dan D) dapat berisiko menyebabkan hipervitaminosis/toksisitas."
+      explanation: "Vitamins A, D, E, and K (ADEK) are fat-soluble vitamins stored in liver and adipose reserves. In contrast, Vitamin C and B-complex vitamins are water-soluble and excreted in urine when in excess.",
+      pearl: "Because they accumulate in adipose and hepatic tissues, excessive intake of fat-soluble vitamins (particularly Vitamin A and D) carries a genuine risk of hypervitaminosis toxicity."
     },
     alternate: {
-      category: "Anatomi & Endokrinologi",
-      question: "Organ tubuh manakah yang memiliki pulau-pulau Langerhans dan memproduksi hormon Insulin untuk mengendalikan kadar gula darah?",
+      category: "Anatomy & Endocrinology",
+      question: "Which organ contains the Islets of Langerhans and secretes the hormone Insulin to regulate blood glucose homeostasis?",
       options: [
-        "Kantung Empedu",
-        "Pankreas",
-        "Limpa (Spleen)",
-        "Kelenjar Tiroid"
+        "Gallbladder",
+        "Pancreas",
+        "Spleen",
+        "Thyroid Gland"
       ],
       answer: 1,
-      explanation: "Pankreas memproduksi hormon insulin melalui sel beta di Pulau Langerhans. Insulin memfasilitasi masuknya glukosa dari peredaran darah ke dalam sel otot dan adiposa.",
-      pearl: "Pada Diabetes Melitus Tipe 1 terjadi destruksi autoimun pada sel beta pankreas sehingga produksi insulin terhenti absolut."
+      explanation: "The pancreas synthesizes insulin via beta cells located within the Islets of Langerhans, facilitating cellular uptake of glucose into skeletal muscle and adipose tissues.",
+      pearl: "In Type 1 Diabetes Mellitus, autoimmune destruction of pancreatic beta cells leads to an absolute deficiency in endogenous insulin production."
     }
   },
   3: {
-    prize: "Rp 300.000",
+    prize: "Rp 300,000",
     safe: false,
     primary: {
-      category: "Pertolongan Pertama (P3K)",
-      question: "Tindakan pertolongan pertama yang paling benar dan tepat menurut protokol medis untuk menangani luka bakar ringan (derajat 1) akibat tersiram air panas adalah:",
+      category: "First Aid & Emergency Response",
+      question: "What is the primary evidence-based first-aid protocol for managing a minor superficial (first-degree) thermal burn caused by hot water?",
       options: [
-        "Mengoleskan pasta gigi (odol), kecap, atau mentega",
-        "Mengalirkan air bersih mengalir bersuhu ruang selama 10–20 menit",
-        "Menempelkan es batu langsung di atas luka bakar",
-        "Memecahkan gelembung luka bakar dengan jarum jahit"
+        "Applying toothpaste, soy sauce, or butter immediately",
+        "Cooling the burn under cool running tap water for 10–20 minutes",
+        "Applying direct ice cubes onto the burn wound",
+        "Popping burn blisters with an unsterilized sewing needle"
       ],
       answer: 1,
-      explanation: "Pertolongan pertama luka bakar adalah mendinginkan area luka menggunakan air bersih mengalir bersuhu ruang (bukan air es) selama 10-20 menit untuk menghentikan kerusakan termal jaringan lebih dalam.",
-      pearl: "Mengoleskan pasta gigi atau kecap justru memerangkap panas, merusak epitel baru, dan meningkatkan risiko infeksi bakteri sekunder."
+      explanation: "Immediate first-aid for thermal burns involves cooling the area under gentle, room-temperature running tap water for 10 to 20 minutes to halt ongoing thermal tissue damage and relieve pain.",
+      pearl: "Applying toothpaste, butter, or sauces traps heat within underlying dermal layers, damages regenerating epithelial cells, and significantly escalates the risk of secondary bacterial infection."
     },
     alternate: {
-      category: "Pertolongan Pertama Muskuloskeletal",
-      question: "Dalam penanganan cedera terkilir (sprain) akut pada pergelangan kaki, manakah prinsip baku pertolongan pertama yang benar?",
+      category: "Musculoskeletal First Aid",
+      question: "In the acute management of a lateral ankle ligament sprain, what is the standard evidence-based first aid protocol?",
       options: [
-        "Langsung dipijat dan diurut sekuat tenaga",
-        "Protokol R.I.C.E (Rest, Ice, Compression, Elevation)",
-        "Diberikan kompres panas mendidih pada 1 jam pertama",
-        "Dipaksa berjalan agar otot tidak kaku"
+        "Vigorous deep tissue massage immediately",
+        "The R.I.C.E. protocol (Rest, Ice, Compression, Elevation)",
+        "Applying scalding hot compresses within the first hour",
+        "Forced weight-bearing walking to prevent joint stiffness"
       ],
       answer: 1,
-      explanation: "Metode baku cedera ligamen akut adalah RICE: Istirahatkan (Rest), kompres es 15-20 menit (Ice), balut tekan elastis (Compression), dan posisikan lebih tinggi dari jantung (Elevation) untuk meredam edema.",
-      pearl: "Memijat cedera akut pada fase inflamasi awal (<48 jam) berisiko merobek pembuluh darah mikroskopis dan memperparah hematoma."
+      explanation: "The acute standard of care for ligament sprains is R.I.C.E.: Rest the limb, Ice for 15–20 minutes, apply elastic Compression bandage, and Elevate the limb above heart level to reduce interstitial edema.",
+      pearl: "Massaging acute ligament injuries during the initial inflammatory phase (<48 hours) risks tearing fragile capillaries and exacerbating localized hematoma."
     }
   },
   4: {
-    prize: "Rp 500.000",
+    prize: "Rp 500,000",
     safe: false,
     primary: {
-      category: "Fisiologi & Hematologi",
-      question: "Komponen seluler darah yang mengandung protein hemoglobin dan bertugas mengangkut oksigen dari paru-paru ke seluruh jaringan tubuh adalah:",
+      category: "Physiology & Hematology",
+      question: "Which cellular blood element contains the iron-rich protein hemoglobin and is primarily responsible for transporting oxygen from the lungs to peripheral tissues?",
       options: [
-        "Leukosit (Sel darah putih)",
-        "Trombosit (Keping darah)",
-        "Eritrosit (Sel darah merah)",
-        "Plasma darah"
+        "Leukocytes (White Blood Cells)",
+        "Thrombocytes (Platelets)",
+        "Erythrocytes (Red Blood Cells)",
+        "Blood Plasma"
       ],
       answer: 2,
-      explanation: "Eritrosit berbentuk bikonkaf tanpa inti pada mamalia dan kaya akan molekul hemoglobin. Setiap molekul hemoglobin dapat mengikat hingga 4 molekul gas oksigen (O2).",
-      pearl: "Masa hidup rata-rata eritrosit dalam sirkulasi manusia adalah sekitar 120 hari sebelum difagositosis oleh makrofag di limpa dan hepar."
+      explanation: "Erythrocytes (red blood cells) are anucleated biconcave discs packed with hemoglobin. Each hemoglobin tetramer binds up to 4 oxygen (O2) molecules.",
+      pearl: "The physiological lifespan of circulating erythrocytes is approximately 120 days before being phagocytosed by reticuloendothelial macrophages in the spleen and liver."
     },
     alternate: {
-      category: "Antropometri & Epidemiologi",
-      question: "Menurut kriteria WHO untuk populasi Asia-Pasifik, rentang Indeks Massa Tubuh (IMT / BMI) yang tergolong 'Berat Badan Normal' adalah:",
+      category: "Anthropometry & Epidemiology",
+      question: "According to WHO criteria adapted for Asian populations, what is the Body Mass Index (BMI) range classified as 'Normal Weight'?",
       options: [
         "10.0 - 15.0 kg/m²",
         "18.5 - 22.9 kg/m²",
@@ -123,136 +123,136 @@ const QUESTION_BANK = {
         "35.0 - 40.0 kg/m²"
       ],
       answer: 1,
-      explanation: "Kriteria Asia-Pasifik menetapkan IMT normal pada 18,5 - 22,9 kg/m². Batas kelebihan berat badan (overweight) dimulai pada 23,0 kg/m², dan obesitas pada ≥ 25,0 kg/m² karena risiko kardiovaskular terjadi pada IMT lebih rendah dibanding populasi Kaukasia.",
-      pearl: "IMT dihitung dengan rumus: Berat Badan (kg) dibagi dengan Kuadrat Tinggi Badan (m²)."
+      explanation: "The Asian-Pacific WHO cut-offs define normal BMI as 18.5 – 22.9 kg/m². Overweight is defined at 23.0 – 24.9 kg/m², and Obesity at ≥ 25.0 kg/m² due to higher cardiovascular risk profiles at lower BMI thresholds.",
+      pearl: "BMI is calculated as: Weight in kilograms divided by the square of Height in meters (kg/m²)."
     }
   },
   5: {
-    prize: "Rp 1.000.000",
+    prize: "Rp 1,000,000",
     safe: true,
     primary: {
-      category: "Gerakan Masyarakat Cerdas Obat (GeMa CerMat)",
-      question: "Kementerian Kesehatan RI dan Ikatan Apoteker Indonesia (IAI) mengampanyekan pedoman cerdas mengelola obat keluarga yang disingkat 'DAGUSIBU'. Apa kepanjangannya?",
+      category: "Public Health & Medication Safety",
+      question: "In community health guidelines for safe home drug disposal, what is the critical reason for never discarding whole unused antibiotics into household trash or open waterways?",
       options: [
-        "Daftar, Gunakan, Simpan, dan Buat",
-        "Dapatkan, Gunakan, Simpan, dan Buang obat dengan benar",
-        "Diskon, Antar, Garansi, dan Subsidi",
-        "Dosis, Alergi, Gejala, dan Imunisasi"
+        "To prevent commercial loss for retail pharmacies",
+        "To prevent environmental contamination and selective pressure causing Antimicrobial Resistance (AMR)",
+        "Because antibiotics decompose into toxic cyanide gas within 2 hours",
+        "To maintain municipal landfill pH neutrality"
       ],
       answer: 1,
-      explanation: "DAGUSIBU adalah akronim resmi edukasi kefarmasian: Dapatkan obat di sarana resmi (Apotek/Faskes), Gunakan sesuai indikasi dan aturan pakai, Simpan pada wadah dan suhu yang tepat, serta Buang limbah obat rusak/kedaluwarsa secara benar.",
-      pearl: "Membuang antibiotik utuh ke tanah atau selokan tanpa dirusak terlebih dahulu dapat mencemari lingkungan dan memicu seleksi bakteri resisten antibiotik."
+      explanation: "Improper disposal of intact antimicrobial agents into soil and waterways creates sub-inhibitory environmental concentrations that exert selective evolutionary pressure, accelerating global Antimicrobial Resistance (AMR).",
+      pearl: "Unused medications should be surrendered to official take-back programs or rendered unusable (mixed with coffee grounds or cat litter) following regulatory disposal protocols."
     },
     alternate: {
-      category: "Pemeriksaan Tanda Vital",
-      question: "Berapa rentang nilai saturasi oksigen perifer (SpO2) normal yang diukur menggunakan alat pulse oximeter pada orang dewasa yang bernapas di udara ruangan?",
+      category: "Vital Signs & Clinical Monitoring",
+      question: "What is the normal peripheral blood oxygen saturation (SpO2) range measured by a pulse oximeter in a healthy adult breathing room air at sea level?",
       options: [
         "50% - 65%",
         "70% - 80%",
         "95% - 100%",
-        "Selalu wajib tepat 150%"
+        "Exactly 150%"
       ],
       answer: 2,
-      explanation: "Saturasi oksigen perifer (SpO2) normal adalah 95% - 100%. Nilai di bawah 94% mengindikasikan hipoksia ringan hingga sedang yang memerlukan evaluasi klinis dan terapi oksigen.",
-      pearl: "Kondisi 'Happy Hypoxia' pada sebagian pasien COVID-19 ditandai SpO2 turun drastis <90% namun pasien tidak merasa sesak napas secara subjektif."
+      explanation: "Normal peripheral arterial oxygen saturation (SpO2) at sea level ranges between 95% and 100%. Readings below 94% signify hypoxemia warranting clinical evaluation and supplemental oxygen therapy.",
+      pearl: "The phenomenon known as 'Happy Hypoxia' (silent hypoxemia), frequently noted in viral pneumonias, features SpO2 levels dropping below 88% without subjective dyspnea."
     }
   },
   6: {
-    prize: "Rp 2.000.000",
+    prize: "Rp 2,000,000",
     safe: false,
     primary: {
-      category: "Regulasi & Penggolongan Obat BPOM",
-      question: "Simbol penandaan pada kemasan obat berupa LINGKARAN HIJAU dengan garis tepi berwarna hitam menandakan bahwa obat tersebut tergolong sebagai:",
+      category: "Pharmaceutical Regulatory Affairs",
+      question: "In pharmaceutical product packaging symbols, what classification does a GREEN CIRCLE symbol with a black border designate?",
       options: [
-        "Obat Narkotika",
-        "Obat Keras",
-        "Obat Bebas (dapat dibeli tanpa resep dokter)",
-        "Obat Bebas Terbatas"
+        "Controlled Narcotic Drug",
+        "Prescription-Only Medicine (POM)",
+        "Over-The-Counter (OTC) / General Sale Medicine",
+        "Limited Over-The-Counter with Warning Notices"
       ],
       answer: 2,
-      explanation: "Lingkaran hijau bergaris tepi hitam adalah logo resmi Obat Bebas, yaitu obat yang relatif aman digunakan secara mandiri untuk gejala ringan dan dapat dibeli bebas di apotek maupun toko obat berizin.",
-      pearl: "Meski berstatus obat bebas, penggunaan parasetamol berlebih (>4 gram/hari pada dewasa) tetap berisiko fatal memicu nekrosis sel hati akut."
+      explanation: "A green circle surrounded by a black border represents Over-The-Counter (OTC) General Sale medicines, indicating products of proven safety suitable for self-medication of minor self-limiting symptoms without a prescription.",
+      pearl: "Even for OTC analgesics like Paracetamol, adult intake exceeding 4 grams/24h can precipitate life-threatening acute hepatic centrilobular necrosis."
     },
     alternate: {
-      category: "Regulasi & Penggolongan Obat BPOM",
-      question: "Simbol penandaan LINGKARAN BIRU bergaris tepi hitam disertai salah satu dari tanda peringatan P.No.1 hingga P.No.6 pada kemasan merupakan ciri khas golongan:",
+      category: "Pharmaceutical Regulatory Affairs",
+      question: "A BLUE CIRCLE symbol with a black border, accompanied by mandatory statutory warning notices (P.No. 1 to 6), designates which regulatory class of drugs?",
       options: [
-        "Obat Bebas Terbatas",
-        "Jamu Tradisional",
-        "Obat Golongan Narkotika",
-        "Fitofarmaka Terstandar"
+        "Limited Over-The-Counter (Behind-The-Counter) Medicine",
+        "Traditional Herbal Preparation",
+        "Schedule II Narcotic Drug",
+        "Standardized Biologics"
       ],
       answer: 0,
-      explanation: "Lingkaran biru bergaris tepi hitam menandakan Obat Bebas Terbatas (dahulu Daftar W). Obat ini sebenarnya tergolong obat keras namun dalam jumlah dan sediaan tertentu masih boleh dibeli tanpa resep dokter dan wajib disertai tanda peringatan (P.No.1 s/d P.No.6).",
-      pearl: "Contoh P.No.1: 'Awas! Obat Keras. Bacalah aturan memakainya.' Contoh P.No.2: 'Awas! Obat Keras. Hanya untuk kumur, jangan ditelan.'"
+      explanation: "A blue circle with a black border indicates Limited Over-the-Counter medicines. These are potent medications sold in restricted unit pack sizes without a prescription, provided they carry mandated statutory caution warnings.",
+      pearl: "Standard warning P.No. 1 states: 'Caution! Potent Medication. Read package insert carefully before use.' P.No. 2 states: 'For gargle only, do not swallow.'"
     }
   },
   7: {
-    prize: "Rp 4.000.000",
+    prize: "Rp 4,000,000",
     safe: false,
     primary: {
-      category: "Preskripsi & Terminologi Farmasi",
-      question: "Dalam penulisan resep obat oleh dokter, singkatan bahasa Latin 'p.c.' (post coenam) memiliki arti petunjuk pemakaian:",
+      category: "Medical Prescription & Latin Sig Codes",
+      question: "On a physician's prescription, what clinical administration timing is indicated by the Latin abbreviation 'p.c.' (post coenam)?",
       options: [
-        "Sebelum makan (kondisi lambung kosong)",
-        "Sesudah makan",
-        "Tepat saat suapan makanan pertama",
-        "Hanya saat hendak tidur malam"
+        "Before meals on an empty stomach",
+        "After meals",
+        "Immediately with the first mouthful of food",
+        "Exclusively at bedtime"
       ],
       answer: 1,
-      explanation: "Singkatan 'p.c.' berasal dari frasa Latin 'post coenam' yang berarti 'sesudah makan'. Ini umum digunakan untuk obat yang berpotensi mengiritasi mukosa lambung (seperti NSAID) atau yang bioavailabilitasnya meningkat bersama makanan.",
-      pearl: "Kebalikan dari p.c. adalah 'a.c.' (ante coenam) yang berarti 'sebelum makan' (sekitar 30-60 menit sebelum makan, misal Antasida, Omeprazol, atau Sukralfat)."
+      explanation: "The Latin abbreviation 'p.c.' denotes 'post coenam', meaning 'after meals'. This timing is typically prescribed for drugs that risk gastric mucosal irritation (such as NSAIDs) or those requiring food lipids for enhanced absorption.",
+      pearl: "Conversely, 'a.c.' (ante coenam) instructs 'before meals' (30–60 minutes prior, common for proton pump inhibitors, sucralfate, or levothyroxine)."
     },
     alternate: {
-      category: "Preskripsi & Terminologi Farmasi",
-      question: "Apakah arti dari singkatan Latin 'p.r.n.' (pro re nata) yang sering ditulis dokter pada signa resep obat pereda nyeri atau mual?",
+      category: "Medical Prescription & Latin Sig Codes",
+      question: "What is the medical meaning of the Latin direction abbreviation 'p.r.n.' (pro re nata) commonly found on analgesic or antiemetic prescriptions?",
       options: [
-        "Harus dihabiskan tanpa henti",
-        "Diminum bergantian setiap jam",
-        "Bila perlu / jika keluhan muncul",
-        "Diberikan secara suntikan intravena"
+        "Must be taken continuously without interruption",
+        "Taken strictly every hour around the clock",
+        "As needed / when symptoms arise",
+        "Administered via intravenous infusion only"
       ],
       answer: 2,
-      explanation: "'p.r.n.' (pro re nata) berarti 'jika diperlukan' atau 'bila timbul gejala'. Contoh: Paracetamol 500mg tab S.p.r.n. tdd tab 1 (artinya diminum 3 kali sehari 1 tablet hanya bila demam/nyeri timbul).",
-      pearl: "Resep antibiotik TIDAK BOLEH ditulis dengan aturan p.r.n. karena memerlukan kadar tunak obat (steady-state concentration) yang konsisten untuk membunuh bakteri."
+      explanation: "'p.r.n.' stands for 'pro re nata', translating to 'as needed' or 'as circumstances require' (e.g., Paracetamol 500 mg tab, 1 tablet TID p.r.n. for fever or pain).",
+      pearl: "Systemic antibiotic regimens must NEVER be prescribed with p.r.n. directions, as consistent minimum inhibitory steady-state serum concentrations are mandatory to prevent treatment failure."
     }
   },
   8: {
-    prize: "Rp 8.000.000",
+    prize: "Rp 8,000,000",
     safe: false,
     primary: {
-      category: "Farmakoterapi & Resistensi Mikroba",
-      question: "Mengapa pasien yang mendapatkan terapi antibiotik dari dokter diwajibkan menghabiskan seluruh obat sesuai durasi resep, meskipun gejala penyakitnya sudah sembuh?",
+      category: "Pharmacotherapy & Antimicrobial Stewardship",
+      question: "Why are patients prescribed an antibiotic course strictly instructed to complete the entire treatment duration, even after clinical symptoms have resolved?",
       options: [
-        "Agar apotek tidak mengalami kerugian stok obat",
-        "Mencegah bakteri mutasi menjadi kebal dan resisten (Antimicrobial Resistance)",
-        "Karena antibiotik tidak dapat disimpan lebih dari 24 jam",
-        "Supaya berat badan pasien tidak mengalami penurunan mendadak"
+        "To ensure pharmacy inventory clearance",
+        "To prevent surviving bacterial sub-populations from mutating into resistant strains (Antimicrobial Resistance)",
+        "Because open antibiotic containers degrade within 24 hours",
+        "To avoid acute changes in metabolic body weight"
       ],
       answer: 1,
-      explanation: "Menghentikan antibiotik sebelum durasi terapi tuntas akan menyisakan subpopulasi bakteri yang paling tangguh. Bakteri tersebut dapat bermutasi, mereplikasi diri, dan menghasilkan strain bakteri resisten (AMR) yang tidak mempan lagi dengan obat yang sama.",
-      pearl: "WHO menetapkan Antimicrobial Resistance (AMR) sebagai salah satu dari 10 ancaman kesehatan masyarakat global paling berbahaya di dunia saat ini."
+      explanation: "Premature discontinuation of antibiotic courses leaves behind the hardiest bacterial sub-populations. These surviving microbes can mutate, exchange resistance plasmids, and propagate multi-drug resistant (MDR) strains.",
+      pearl: "The World Health Organization (WHO) has ranked Antimicrobial Resistance (AMR) among the top 10 global public health threats facing humanity."
     },
     alternate: {
-      category: "Interaksi Obat Klinis",
-      question: "Mengapa konsumsi antibiotik golongan Tetrasiklin atau Siprofloksasin TIDAK boleh diminum bersamaan dengan susu atau suplemen antasida berkalsium/magnesium?",
+      category: "Clinical Drug-Drug Interactions",
+      question: "Why should oral Tetracyclines or Fluoroquinolones (e.g., Ciprofloxacin) NOT be co-administered simultaneously with dairy milk or calcium/magnesium antacids?",
       options: [
-        "Memicu terbentuknya gas beracun sianida di lambung",
-        "Kation divalen (Ca²⁺/Mg²⁺) membentuk senyawa khelat tak larut sehingga obat gagal diserap",
-        "Membuat rasa antibiotik menjadi terlalu manis",
-        "Menyebabkan destruksi enzim pepsin secara permanen"
+        "They form toxic cyanide gas in gastric juice",
+        "Multivalent cations (Ca²⁺/Mg²⁺/Al³⁺) form insoluble chelate complexes, crashing oral bioavailability",
+        "They trigger rapid enzymatic breakdown of pepsin",
+        "They make the drug taste unpalatably sweet"
       ],
       answer: 1,
-      explanation: "Kation multivalen seperti Ca²⁺ (susu), Mg²⁺/Al³⁺ (antasida), dan Fe²⁺ (tablet tambah darah) berikatan secara khelasi dengan cincin tetrasiklin/fluorokuinolon, membentuk kompleks khelat tidak larut yang menurunkan absorpsi obat hingga >80%.",
-      pearl: "Solusi klinisnya adalah memberi jeda waktu konsumsi minimal 2 jam sebelum atau 4 jam sesudah minum susu/antasida."
+      explanation: "Multivalent metal cations like Ca²⁺ (dairy), Mg²⁺/Al³⁺ (antacids), and Fe²⁺ (hematinics) bind and chelate the core aromatic rings of tetracyclines and fluoroquinolones into insoluble precipitates, reducing absorption by up to 85%.",
+      pearl: "To prevent therapeutic failure, administration must be separated by at least 2 hours before or 4 hours after consuming divalent/trivalent cation sources."
     }
   },
   9: {
-    prize: "Rp 16.000.000",
+    prize: "Rp 16,000,000",
     safe: false,
     primary: {
-      category: "Penyakit Menular & Parasitologi",
-      question: "Spesies nyamuk manakah yang menjadi vektor biologis utama penularan virus Dengue (penyebab Demam Berdarah Dengue / DBD) dan memiliki karakteristik belang hitam-putih serta aktif menggigit di pagi dan sore hari?",
+      category: "Infectious Diseases & Medical Vector Biology",
+      question: "Which mosquito species serves as the primary biological vector for Dengue virus transmission, characterized by white lyre markings and diurnal (daytime) biting habits?",
       options: [
         "Anopheles sundaicus",
         "Culex quinquefasciatus",
@@ -260,12 +260,12 @@ const QUESTION_BANK = {
         "Mansonia uniformis"
       ],
       answer: 2,
-      explanation: "Aedes aegypti (dan Aedes albopictus) adalah vektor primer virus Dengue (famili Flaviviridae). Nyamuk betina memiliki pola aktivitas menggigit 'diurnal' (puncak pada pagi pukul 08.00-10.00 dan sore pukul 15.00-17.00).",
-      pearl: "Anopheles adalah vektor malaria (aktif malam hari), sedangkan Culex adalah vektor utama filariasis (kaki gajah) dan Japanese Encephalitis."
+      explanation: "Aedes aegypti (along with Aedes albopictus) is the primary vector transmitting Dengue virus (family Flaviviridae). Female mosquitoes exhibit bimodal diurnal biting peaks in the early morning and late afternoon.",
+      pearl: "Anopheles mosquitoes transmit Malaria (nocturnal biters), whereas Culex species are primary vectors for Lymphatic Filariasis and Japanese Encephalitis."
     },
     alternate: {
-      category: "Patologi Klinik & Diagnostik",
-      question: "Berapa rentang kadar Glukosa Darah Puasa (GDP) normal pada orang dewasa yang tidak menderita diabetes melitus setelah berpuasa minimal 8 jam?",
+      category: "Clinical Pathology & Diagnostic Biomarkers",
+      question: "According to international ADA diagnostic criteria, what is the normal Fasting Plasma Glucose (FPG) range in a non-diabetic adult following an 8-hour overnight fast?",
       options: [
         "30 - 50 mg/dL",
         "70 - 99 mg/dL",
@@ -273,119 +273,119 @@ const QUESTION_BANK = {
         "200 - 300 mg/dL"
       ],
       answer: 1,
-      explanation: "Berdasarkan konsensus PERKENI dan ADA: GDP normal adalah 70 - 99 mg/dL. Nilai 100 - 125 mg/dL dikategorikan sebagai Pre-diabetes (Glukosa Darah Puasa Terganggu), dan nilai ≥ 126 mg/dL terindikasi Diabetes Melitus.",
-      pearl: "Tes HbA1c mencerminkan rerata kendali glikemik eritrosit selama 2-3 bulan terakhir dengan nilai normal < 5,7%."
+      explanation: "Normal fasting plasma glucose (FPG) is defined as 70 to 99 mg/dL. Values between 100 and 125 mg/dL indicate Impaired Fasting Glucose (Prediabetes), and levels ≥ 126 mg/dL on repeated testing are diagnostic for Diabetes Mellitus.",
+      pearl: "The Hemoglobin A1c (HbA1c) test reflects mean glycemic control over the preceding 2–3 months; normal levels are strictly < 5.7%."
     }
   },
   10: {
-    prize: "Rp 32.000.000",
+    prize: "Rp 32,000,000",
     safe: true,
     primary: {
-      category: "Regulasi Obat Keras (Daftar G)",
-      question: "Simbol LINGKARAN MERAH bergaris tepi hitam dengan HURUF 'K' berwarna hitam di bagian tengahnya merupakan penandaan wajib untuk golongan:",
+      category: "Pharmaceutical Regulatory Affairs",
+      question: "In pharmaceutical drug scheduling, which category represents Prescription-Only Medicines (POM / Ethical Drugs), requiring mandatory dispensing under a physician's prescription?",
       options: [
-        "Obat Herbal Terstandar",
-        "Obat Bebas Terbatas",
-        "Obat Keras (hanya dapat diserahkan dengan Resep Dokter)",
-        "Kosmetik Medis"
+        "Standardized Dietary Supplements",
+        "General Sale Over-The-Counter Remedies",
+        "Prescription-Only Medicines (POM / Ethical Drugs)",
+        "Cosmeceuticals"
       ],
       answer: 2,
-      explanation: "Logo lingkaran merah dengan huruf 'K' kapital adalah tanda Obat Keras (Gevaarlijk / Daftar G). Golongan ini mencakup seluruh antibiotik, hormon, obat suntik, psikotropika, dan obat kardiovaskular yang hanya sah diserahkan apoteker atas resep dokter.",
-      pearl: "Penyerahan obat keras tanpa resep dokter di luar daftar DOWA (Daftar Obat Wajib Apotek) merupakan pelanggaran terhadap UU Kesehatan."
+      explanation: "Prescription-Only Medicines (Ethical Drugs / POM) comprise potent therapeutic agents—including systemic antibiotics, hormones, antihypertensives, and parenterals—that can only be lawfully dispensed by a licensed pharmacist upon a valid prescription.",
+      pearl: "Dispensing legend prescription drugs without a practitioner's order violates national Pharmacy Practice Acts and Good Pharmacy Practice (GPP) standards."
     },
     alternate: {
-      category: "Farmakologi Kardiovaskular",
-      question: "Golongan obat antihipertensi lini pertama manakah yang bekerja spesifik dengan menghambat enzim Angiotensin-Converting Enzyme (ACE) sehingga sintesis Angiotensin II terhambat?",
+      category: "Cardiovascular Pharmacology",
+      question: "Which first-line antihypertensive drug class works by competitively inhibiting Angiotensin-Converting Enzyme, thereby blocking the synthesis of potent vasoconstrictor Angiotensin II?",
       options: [
-        "Beta-Blocker (contoh: Propranolol, Bisoprolol)",
-        "ACE Inhibitor (contoh: Kaptopril, Ramipril, Lisinopril)",
-        "Calcium Channel Blocker (contoh: Amlodipin, Nifedipin)",
-        "Diuretik Loop (contoh: Furosemid)"
+        "Beta-Adrenergic Blockers (e.g., Bisoprolol)",
+        "ACE Inhibitors (e.g., Captopril, Ramipril, Lisinopril)",
+        "Calcium Channel Blockers (e.g., Amlodipine)",
+        "Loop Diuretics (e.g., Furosemide)"
       ],
       answer: 1,
-      explanation: "ACE Inhibitor (berakhiran '-pril' seperti Kaptopril, Enalapril, Ramipril) menghambat konversi Angiotensin I menjadi Angiotensin II (suatu vasokonstriktor poten), menghasilkan vasodilatasi arteriol dan penurunan retensi aldosteron.",
-      pearl: "Enzim ACE juga memecah bradikinin. Hambatan ACE menyebabkan akumulasi bradikinin di saluran napas, yang memicu efek samping khas berupa batuk kering pada 10-20% pasien."
+      explanation: "ACE inhibitors (bearing the '-pril' suffix) inhibit the conversion of Angiotensin I to Angiotensin II, inducing systemic arteriolar vasodilation and suppressing aldosterone-mediated sodium/water retention.",
+      pearl: "Because the ACE enzyme is identical to Kininase II, inhibiting it leads to respiratory accumulation of bradykinin, causing a persistent dry cough in 10–20% of treated patients."
     }
   },
   11: {
-    prize: "Rp 64.000.000",
+    prize: "Rp 64,000,000",
     safe: false,
     primary: {
-      category: "Standar CDOB BPOM & Rantai Dingin",
-      question: "Berdasarkan Peraturan BPOM tentang Cara Distribusi Obat yang Baik (CDOB), berapa rentang suhu penyimpanan wajib dalam Cold Chain (Rantai Dingin) untuk vaksin dan produk biologis termo-labil?",
+      category: "Good Distribution Practice (GDP) & Cold Chain",
+      question: "Under Good Distribution Practice (GDP) and WHO cold-chain standards, what is the mandatory validated temperature range for storing thermo-labile biologics, vaccines, and regular insulin?",
       options: [
-        "Suhu beku ekstrem di bawah -50°C",
-        "Suhu dingin terkontrol antara +2°C hingga +8°C",
-        "Suhu sejuk antara +15°C hingga +25°C",
-        "Suhu kamar tropis antara +30°C hingga +37°C"
+        "Deep freeze below -50°C",
+        "Controlled cold temperature between +2°C and +8°C",
+        "Cool storage between +15°C and +25°C",
+        "Ambient room temperature between +30°C and +37°C"
       ],
       answer: 1,
-      explanation: "Standar CDOB BPOM menetapkan suhu Cold Chain untuk sebagian besar vaksin (seperti Hepatitis B, DPT, BCG, TT) dan insulin adalah +2°C s/d +8°C. Paparan suhu beku (<0°C) dapat merusak adjuvant aluminium pada vaksin toksoid.",
-      pearl: "Vaksin polio oral (OPV) dapat disimpan pada suhu beku (-15°C s/d -25°C) di tingkat depo pusat, namun di tingkat faskes layanan disimpan pada +2°C s/d +8°C."
+      explanation: "Validated Cold Chain standards require +2°C to +8°C for thermo-labile biologicals, vaccines (e.g., Hepatitis B, DTP, BCG, Tetanus toxoid), and insulin. Freezing exposure (<0°C) must be avoided as ice crystals denature protein structures.",
+      pearl: "Oral Polio Vaccine (OPV) can be stored frozen at -15°C to -25°C in bulk depots, but must remain at +2°C to +8°C once distributed to clinical points of care."
     },
     alternate: {
-      category: "Manajemen Mutu Vaksin",
-      question: "Indikator kimiawi berupa label stiker pada badan botol vaksin yang mengalami perubahan warna bertahap saat terpapar panas kumulatif disebut:",
+      category: "Vaccine Quality Assurance",
+      question: "What is the name of the temperature-sensitive indicator sticker affixed directly onto vaccine vials that undergoes irreversible progressive color change when exposed to cumulative heat over time?",
       options: [
         "Vaccine Vial Monitor (VVM)",
-        "Barcode Serial DataMatrix",
-        "Hologram Segel Keamanan",
-        "Radio Frequency Identification (RFID)"
+        "2D DataMatrix Serializer",
+        "Holographic Tamper Seal",
+        "Passive RFID Inlay"
       ],
       answer: 0,
-      explanation: "VVM (Vaccine Vial Monitor) adalah label pemantau panas pada botol vaksin. Jika persegi bagian dalam lebih terang dari lingkaran luar (Kondisi A/B), vaksin dapat digunakan. Jika warna persegi sama atau lebih gelap dari lingkaran (Kondisi C/D), vaksin wajib dibuang.",
-      pearl: "VVM tidak mendeteksi paparan beku, melainkan mencatat akumulasi paparan energi panas terhadap waktu secara ireversibel."
+      explanation: "A Vaccine Vial Monitor (VVM) is a chemical heat indicator. If the inner square is lighter than the outer circle (Stages 1 and 2), the vaccine is safe for use. If the inner square matches or is darker than the outer ring (Stages 3 and 4), the vaccine must be discarded.",
+      pearl: "VVMs record cumulative heat exposure over time; they do not detect accidental freezing episodes, which require the clinical Shake Test."
     }
   },
   12: {
-    prize: "Rp 125.000.000",
+    prize: "Rp 125,000,000",
     safe: false,
     primary: {
-      category: "Toksikologi Klinis & Farmakoterapi Gawat Darurat",
-      question: "Seorang pasien dilarikan ke IGD akibat overdosis akut parasetamol (asetaminofen) dosis toksik masif. Antidotum spesifik lini pertama yang bekerja meregenerasi cadangan glutation hepar adalah:",
+      category: "Clinical Toxicology & Critical Care",
+      question: "A patient presents to the Emergency Department following a massive toxic ingestion of Paracetamol (Acetaminophen). What is the first-line specific antidote that regenerates depleted hepatic glutathione reserves?",
       options: [
-        "Nalokson Hidroklorida",
-        "Atropin Sulfat",
-        "N-Asetilsistein (NAC)",
+        "Naloxone Hydrochloride",
+        "Atropine Sulfate",
+        "N-Acetylcysteine (NAC)",
         "Flumazenil"
       ],
       answer: 2,
-      explanation: "Pada overdosis parasetamol, jalur konjugasi glukuronid jenuh sehingga metabolit reaktif hepatotoksik NAPQI melonjak dan menghabiskan glutation hepar. N-Asetilsistein (NAC) bekerja sebagai donor gugus sulfhidril (-SH) pengganti glutation untuk menginaktivasi NAPQI menjadi sistein/asam merkapturat nontoksik.",
-      pearl: "Efektivitas maksimal NAC tercapai jika diberikan dalam jendela waktu emas (golden period) kurang dari 8 jam pasca konsumsi toksik."
+      explanation: "Paracetamol overdose saturates normal glucuronide/sulfate pathways, shunting metabolism to CYP2E1 which produces toxic NAPQI that depletes hepatic glutathione. N-Acetylcysteine (NAC) replenishes glutathione stores and acts as a direct sulfhydryl donor to neutralize NAPQI.",
+      pearl: "The clinical efficacy of NAC is highest when administered within an 8-hour golden window post-ingestion, as plotted on the Rumack-Matthew nomogram."
     },
     alternate: {
-      category: "Toksikologi & Antidotum Spesifik",
-      question: "Antidotum antagonis kompetitif reseptor murni yang digunakan secara emergensi untuk membalikkan depresi pernapasan fatal akibat overdosis obat golongan Opioid (seperti Morfin/Fentanil) adalah:",
+      category: "Toxicology & Specific Antidotes",
+      question: "Which pure competitive opioid receptor antagonist is administered parenterally in acute medical emergencies to reverse life-threatening respiratory depression caused by Opioid overdose (e.g., Morphine, Fentanyl)?",
       options: [
-        "Nalokson (Narcan)",
-        "Fitomenadion (Vitamin K1)",
-        "Pralidoksim (2-PAM)",
-        "Deferoksamin"
+        "Naloxone (Narcan)",
+        "Phytomenadione (Vitamin K1)",
+        "Pralidoxime (2-PAM)",
+        "Deferoxamine"
       ],
       answer: 0,
-      explanation: "Nalokson adalah antagonis murni reseptor opioid (mu, kappa, delta) dengan afinitas tinggi yang menggusur agonis opioid dari reseptor di sistem saraf pusat, memulihkan dorongan napas spontan dalam hitungan menit.",
-      pearl: "Waktu paruh eliminasi nalokson (sekitar 30-90 menit) lebih singkat dibanding banyak jenis opioid, sehingga pasien harus terus dipantau terhadap risiko depresi napas berulang."
+      explanation: "Naloxone is a high-affinity, pure competitive antagonist at mu, kappa, and delta opioid receptors that displaces opioid agonists in the CNS, restoring spontaneous respiratory drive within 1–3 minutes.",
+      pearl: "Naloxone has an elimination half-life of 30–90 minutes, which is shorter than most long-acting opioids, necessitating vigilant monitoring for rebound respiratory arrest."
     }
   },
   13: {
-    prize: "Rp 250.000.000",
+    prize: "Rp 250,000,000",
     safe: false,
     primary: {
-      category: "Farmakokinetika Klinis Fundamental",
-      question: "Parameter farmakokinetika yang didefinisikan sebagai 'fraksi atau persentase dari dosis obat aktif yang mencapai sirkulasi sistemik dalam bentuk utuh' dilambangkan dengan simbol F adalah:",
+      category: "Fundamental Clinical Pharmacokinetics",
+      question: "Which pharmacokinetic parameter, represented by the symbol 'F', is defined as the fraction or percentage of an administered active drug dose that reaches systemic circulation in an unchanged form?",
       options: [
-        "Volume Distribusi (Vd)",
-        "Bioavailabilitas (Ketersediaan Hayati)",
-        "Klirens Renal (Cl)",
-        "Waktu Paruh Eliminasi (t1/2)"
+        "Volume of Distribution (Vd)",
+        "Bioavailability (F)",
+        "Renal Clearance (Cl)",
+        "Elimination Half-Life (t1/2)"
       ],
       answer: 1,
-      explanation: "Bioavailabilitas (F) adalah fraksi obat terabsorpsi utuh yang mencapai sirkulasi sistemik. Pemberian intravena (IV) memiliki bioavailabilitas absolut 100% (F = 1), sedangkan rute oral biasanya < 100% akibat absorpsi tidak sempurna dan metabolisme lintas pertama (first-pass metabolism) di hepar.",
-      pearl: "Uji Ekivalensi / Bioekivalensi (BE) membandingkan kurva AUC (Area Under Curve) dan Cmax obat generik terhadap obat inovator untuk menjamin efikasi terapeutik yang setara."
+      explanation: "Bioavailability (F) represents the fraction of an active drug dose that enters systemic circulation unchanged. Intravenous administration offers an absolute bioavailability of 100% (F = 1.0), whereas oral routes yield F < 1.0 due to incomplete absorption and hepatic first-pass metabolism.",
+      pearl: "Bioequivalence (BE) studies compare AUC and Cmax metrics between generic and reference innovator drugs within an accepted 80.00% – 125.00% 90% confidence interval window."
     },
     alternate: {
-      category: "Metabolisme Obat Enzimatik",
-      question: "Isoenzim sitokrom P450 di mikrosom hepar manusia manakah yang paling dominan dan bertanggung jawab memetabolisme lebih dari 50% seluruh obat terapeutik yang beredar di pasaran?",
+      category: "Hepatic Drug Biotransformation",
+      question: "Which cytochrome P450 isoenzyme in human hepatic and intestinal microsomes is the most abundant and responsible for metabolizing more than 50% of all clinically prescribed therapeutic drugs?",
       options: [
         "CYP1A2",
         "CYP2D6",
@@ -393,97 +393,97 @@ const QUESTION_BANK = {
         "CYP2E1"
       ],
       answer: 2,
-      explanation: "CYP3A4 adalah enzim fase I metabolisme hepar dan usus yang paling melimpah, mengkatalisis metabolisme lebih dari separuh obat klinis (termasuk statin, benzodiazepin, imunosupresan, dan protease inhibitor).",
-      pearl: "Jus buah Grapefruit mengandung furanokumarin yang merupakan inhibitor poten CYP3A4 usus, yang dapat meningkatkan kadar obat darah hingga taraf toksik berbahaya."
+      explanation: "CYP3A4 is the most abundant Phase I biotransformation enzyme in human liver and enterocytes, handling the oxidative clearance of over 50% of marketed pharmaceuticals, including statins, calcium channel blockers, and immunosuppressants.",
+      pearl: "Grapefruit juice contains furanocoumarins that irreversibly inhibit intestinal CYP3A4, precipitously elevating serum concentrations of susceptible oral drugs to toxic levels."
     }
   },
   14: {
-    prize: "Rp 500.000.000",
+    prize: "Rp 500,000,000",
     safe: false,
     primary: {
-      category: "Farmakologi Spesialistik & Efek Toksik",
-      question: "Penggunaan obat antihipertensi golongan ACE Inhibitor (seperti Kaptopril atau Ramipril) sering memicu efek samping batuk kering persisten yang refrakter. Mekanisme biokimia utama penyebab efek samping ini adalah:",
+      category: "Specialist Pharmacology & Drug Toxicities",
+      question: "The use of Angiotensin-Converting Enzyme (ACE) Inhibitors (e.g., Captopril, Ramipril) frequently induces a persistent, refractory dry cough. What is the primary biochemical mechanism responsible for this adverse effect?",
       options: [
-        "Penumpukan asam laktat di alveolus paru-paru",
-        "Akumulasi bradikinin dan substansi P akibat hambatan enzim kininase II oleh obat",
-        "Spasme otot diafragma akibat deplesi ion kalsium",
-        "Stimulasi berlebih reseptor beta-2 adrenergik bronkus"
+        "Lactic acid accumulation in pulmonary alveoli",
+        "Accumulation of Bradykinin and Substance P due to drug-induced inhibition of Kininase II",
+        "Diaphragmatic muscle spasms secondary to calcium ion depletion",
+        "Excessive down-regulation of bronchial beta-2 adrenergic receptors"
       ],
       answer: 1,
-      explanation: "Enzim Angiotensin-Converting Enzyme (ACE) identik dengan Kininase II, enzim yang secara fisiologis mendegradasi bradikinin dan substansi P. Penghambatan ACE menyebabkan akumulasi peptida pro-inflamasi ini di mukosa bronkus dan laring, menstimulasi serabut saraf sensorik C dan memicu batuk kering kronis.",
-      pearl: "Jika pasien intoleran batuk kering akibat ACEI, terapi dialihkan ke golongan ARB (Angiotensin Receptor Blocker, misal Kandesartan/Losartan) yang tidak menghambat metabolisme bradikinin."
+      explanation: "The ACE enzyme is structurally identical to Kininase II, which degrades pro-inflammatory peptides bradykinin and substance P. ACE inhibition causes localized accumulation of these peptides in airway mucosa, stimulating unmyelinated C-fibers and triggering a persistent dry cough.",
+      pearl: "For patients experiencing intolerable ACEI-induced dry cough, guideline-directed therapy is transitioned to Angiotensin Receptor Blockers (ARBs, such as Losartan/Candesartan), which do not alter bradykinin metabolism."
     },
     alternate: {
-      category: "Farmakologi Kemoterapi Antimikroba",
-      question: "Antibiotik bakterisidal golongan Aminoglikosida (seperti Gentamisin, Amikasin, dan Streptomisin) memiliki indeks terapi sempit dengan dua toksisitas organ utama yang harus dipantau ketat yaitu:",
+      category: "Antimicrobial Chemotherapy & Toxicities",
+      question: "Bactericidal Aminoglycoside antibiotics (e.g., Gentamicin, Amikacin, Streptomycin) possess a narrow therapeutic window and require therapeutic drug monitoring (TDM) due to two major dose-limiting organ toxicities:",
       options: [
-        "Kardiotoksisitas dan Hepatotoksisitas",
-        "Ototoksisitas (kerusakan saraf pendengaran VIII) dan Nefrotoksisitas (nekrosis tubular ginjal)",
-        "Osteoporosis dan Retinopati",
-        "Pankreatitis dan Ulkus Peptikum"
+        "Cardiotoxicity and Hepatotoxicity",
+        "Ototoxicity (vestibulocochlear cranial nerve VIII damage) and Nephrotoxicity (proximal tubular necrosis)",
+        "Osteoporosis and Retinopathy",
+        "Acute Pancreatitis and Peptic Ulceration"
       ],
       answer: 1,
-      explanation: "Aminoglikosida terakumulasi secara selektif di sel rambut koklea/vestibular telinga dalam (ototoksisitas yang sering ireversibel) dan sel epitel tubulus proksimal ginjal (nefrotoksisitas yang umumnya reversibel). Oleh karena itu, Therapeutic Drug Monitoring (TDM) kadar puncak (peak) dan palung (trough) wajib dipantau.",
-      pearl: "Kombinasi aminoglikosida dengan loop diuretic (seperti Furosemid) sangat dihindari karena meningkatkan risiko ototoksisitas secara sinergis eksponensial."
+      explanation: "Aminoglycosides selectively accumulate in the renal proximal tubular cells (causing reversible nephrotoxicity) and sensory hair cells of the inner ear cochlea and vestibular apparatus (causing irreversible sensorineural ototoxicity).",
+      pearl: "Co-administering aminoglycosides with loop diuretics (e.g., Furosemide) is strictly avoided due to profound synergistic potentiation of cochlear ototoxicity."
     }
   },
   15: {
-    prize: "Rp 1.000.000.000",
+    prize: "Rp 1,000,000,000",
     safe: true,
     primary: {
-      category: "Onkologi Presisi & Produk Biologi / Biosimilar",
-      question: "Obat antibodi monoklonal rekombinan humanized pertama di dunia yang disetujui FDA (1998) untuk terapi kanker payudara metastatik dengan ekspresi berlebih reseptor Human Epidermal Growth Factor Receptor 2 (HER2) adalah:",
+      category: "Precision Oncology & Targeted Biologics",
+      question: "Which groundbreaking recombinant humanized IgG1 monoclonal antibody was the first targeted agent approved by the US FDA (1998) for treating metastatic breast cancer exhibiting overexpression of the HER2/neu receptor?",
       options: [
-        "Rituksimab (MabThera)",
-        "Bevasizumab (Avastin)",
+        "Rituximab (MabThera)",
+        "Bevacizumab (Avastin)",
         "Trastuzumab (Herceptin)",
         "Infliximab (Remicade)"
       ],
       answer: 2,
-      explanation: "Trastuzumab (Herceptin) adalah antibodi monoklonal IgG1 humanized yang menarget domain ekstraseluler IV dari onkoprotein HER2/neu. Ikatan ini memblokir jalur sinyal proliferasi sel kanker HER2-positif dan memicu sitotoksisitas seluler dependen antibodi (ADCC). Penemuannya merevolusi terapi target onkologi presisi modern.",
-      pearl: "Rituksimab menarget CD20 pada limfoma sel B; Bevasizumab menarget VEGF untuk anti-angiogenesis; sedangkan Infliximab menarget TNF-alfa pada penyakit autoimun."
+      explanation: "Trastuzumab (Herceptin) is a humanized monoclonal IgG1 antibody that binds specifically to extracellular domain IV of the HER2/neu (ErbB2) receptor tyrosine kinase, blocking downstream oncogenic signaling cascades and inducing antibody-dependent cellular cytotoxicity (ADCC).",
+      pearl: "Rituximab targets CD20 on B-cell lymphomas; Bevacizumab targets VEGF to inhibit tumor angiogenesis; and Infliximab neutralizes TNF-alpha in refractory autoimmune disorders."
     },
     alternate: {
-      category: "Farmakokinetika Non-Linier Lanjut",
-      question: "Dalam farmakokinetika lanjut, fenomena di mana laju eliminasi suatu obat berlangsung dengan kecepatan tetap (jumlah konstan obat per satuan waktu) tanpa bergantung pada konsentrasi plasma akibat saturasi enzim eliminasi disebut:",
+      category: "Advanced Non-Linear Pharmacokinetics",
+      question: "In clinical pharmacokinetics, what is the term for the phenomenon where drug elimination proceeds at a constant rate (a fixed amount of drug cleared per unit time) independent of plasma concentration, due to complete saturation of elimination enzyme pathways?",
       options: [
-        "Kinetika Eliminasi Orde Pertama (Linear Kinetics)",
-        "Kinetika Michaelis-Menten / Kinetika Orde Nol (Zero-Order Elimination)",
-        "Difusi Pasif Sederhana",
-        "Filtrasi Glomerulus Linier"
+        "First-Order Linear Kinetics",
+        "Michaelis-Menten / Zero-Order Elimination Kinetics",
+        "Passive Transcellular Diffusion",
+        "Linear Glomerular Filtration"
       ],
       answer: 1,
-      explanation: "Pada Kinetika Orde Nol (Kinetika Non-Linier atau Michaelis-Menten yang tersaturasi), enzim pemetabolisme hepar telah jenuh kapasitas maksimumnya (Vmax). Akibatnya, jumlah obat yang dieliminasi konstan per satuan waktu (contoh: Etanol, Fenitoin pada dosis terapi tinggi, Salisilat toksik). Kenaikan dosis kecil dapat memicu lonjakan konsentrasi plasma yang tidak proporsional dan fatal.",
-      pearl: "Sebagian besar obat terapeutik pada dosis lazim mengikuti Kinetika Orde Pertama, di mana laju eliminasi proporsional terhadap konsentrasi plasma (fraksi konstan per satuan waktu)."
+      explanation: "In Zero-Order (capacity-limited or saturated Michaelis-Menten) kinetics, the metabolic/elimination pathways are saturated at maximum velocity (Vmax). Consequently, a fixed mass of drug is cleared per hour (e.g., Phenytoin at high doses, Ethanol, toxic Salicylates), and minor dosage increases can cause catastrophic exponential surges in serum drug levels.",
+      pearl: "Most pharmaceuticals at typical therapeutic doses follow First-Order kinetics, where the rate of elimination is directly proportional to plasma concentration (a constant fraction cleared per unit time)."
     }
   }
 };
 
-// Lifeline Simulated Consultation Dialogues for Phone a Friend (Konsultasi Spesialis)
+// Lifeline Simulated Consultation Dialogues for Phone a Friend (Specialist Consultation)
 const SPECIALIST_DATABASE = {
   pharmacist: {
-    name: "Apt. Budiarto, S.Farm. (Spesialis Farmasi Klinis & CDOB)",
+    name: "Pharmacist Budiarto, B.Pharm. (Clinical Pharmacy & GDP Specialist)",
     avatar: "👨‍⚕️",
     getAdvice: (level, correctLetter, questionText) => {
       if (level <= 5) {
-        return `Halo rekan sejawat! Pertanyaan ini sangat mendasar dalam ilmu kesehatan masyarakat. Saya 100% yakin jawaban yang tepat adalah opsi (${correctLetter}).`;
+        return `Hello colleague! This is a foundational public health and clinical principle. I am 100% confident that the correct answer is option (${correctLetter}).`;
       } else if (level <= 10) {
-        return `Halo! Kasus farmakoterapi ini cukup umum di apotek dan rumah sakit. Berdasarkan regulasi dan pedoman klinis baku, saya 90% yakin jawabannya adalah (${correctLetter}).`;
+        return `Greetings! This pharmacotherapy case is commonly encountered in hospital and retail pharmacy practice. Based on established clinical guidelines, I am 90% certain the answer is (${correctLetter}).`;
       } else {
-        return `Pertanyaan tingkat spesialis yang luar biasa menantang! Berdasarkan farmakokinetika lanjut dan standar regulasi CDOB BPOM, mekanisme farmakologisnya merujuk kuat ke opsi (${correctLetter}). Keyakinan saya sekitar 80%.`;
+        return `An extraordinarily challenging specialist question! Based on advanced pharmacokinetics, molecular pharmacology, and Good Distribution Practice standards, the mechanism points conclusively to option (${correctLetter}). My confidence is around 80%.`;
       }
     }
   },
   doctor: {
-    name: "dr. Farhan, Sp.A (Spesialis Kedokteran Klinis)",
+    name: "Dr. Farhan, Pediatrician (Clinical Medicine Specialist)",
     avatar: "🩺",
     getAdvice: (level, correctLetter, questionText) => {
       if (level <= 5) {
-        return `Halo! Dari sudut pandang fisiologi tubuh dasar, ini jelas sekali mengarah ke (${correctLetter}). Silakan dikunci jawabannya!`;
+        return `Hello! From a basic physiological and emergency first-aid perspective, this unequivocally points to option (${correctLetter}). Go ahead and lock it in!`;
       } else if (level <= 10) {
-        return `Halo, dari tinjauan tanda vital dan patofisiologi klinis, opsi (${correctLetter}) adalah diagnosis/tindakan yang paling rasional menurut pedoman medis. Keyakinan 85%.`;
+        return `Hello! Reviewing the vital signs, pathology, and clinical presentation, option (${correctLetter}) represents the most rational diagnostic/therapeutic choice according to current medical guidelines. Confidence 85%.`;
       } else {
-        return `Kasus gawat darurat dan terapi target tingkat tinggi! Jika kita evaluasi jalur biokimia dan toksikologinya, saya condong memilih (${correctLetter}). Namun pastikan pertimbangkan kembali ya!`;
+        return `A complex critical care and targeted therapy challenge! Evaluating the biochemical signaling pathways and toxicological dynamics, I strongly favor option (${correctLetter}). Verify your clinical judgment before final lock!`;
       }
     }
   }

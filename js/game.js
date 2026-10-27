@@ -1,5 +1,5 @@
 /**
- * HEALTHQUIZBYOSEE - GAMEPLAY CONTROLLER
+ * EnglishHealthQuizbyOSEE - GAMEPLAY CONTROLLER
  * Manages game state, timer, lifelines, scoring, and UI animations.
  */
 
@@ -208,7 +208,6 @@ class HealthMillionaireGame {
 
   updateTimerDisplay() {
     this.timerDisplay.innerText = this.currentTime;
-    const progressPercent = (this.currentTime / this.timeLimit) * 100;
     
     // Change circle color
     if (this.currentTime <= 10) {
@@ -264,7 +263,7 @@ class HealthMillionaireGame {
         Sound.playWrong();
 
         setTimeout(() => {
-          this.handleGameOver("Jawaban salah!");
+          this.handleGameOver("Incorrect answer selected!");
         }, 1500);
       }
     }, 1800);
@@ -277,12 +276,12 @@ class HealthMillionaireGame {
     this.optionBtns.forEach(b => b.disabled = true);
 
     setTimeout(() => {
-      this.handleGameOver("Waktu habis! Anda tidak sempat mengunci jawaban.");
+      this.handleGameOver("Time's up! You did not lock in an answer before the countdown expired.");
     }, 1500);
   }
 
   showPearlModal(isCorrect) {
-    document.getElementById("pearl-level-badge").innerText = `Level ${this.currentLevel} - ${QUESTION_BANK[this.currentLevel].prize}`;
+    document.getElementById("pearl-level-badge").innerText = `Tier ${this.currentLevel} - ${QUESTION_BANK[this.currentLevel].prize}`;
     document.getElementById("pearl-explanation").innerText = this.currentQuestion.explanation;
     document.getElementById("pearl-clinical-note").innerText = this.currentQuestion.pearl;
     this.pearlModal.classList.remove("hidden");
@@ -325,7 +324,7 @@ class HealthMillionaireGame {
       ? QUESTION_BANK[this.currentLevel - 1].prize 
       : "Rp 0";
     this.securedPrize = walkAwayPrize;
-    this.handleGameOver(`Anda memutuskan berhenti dan mengamankan hadiah!`);
+    this.handleGameOver("You decided to walk away and bank your accumulated cash!");
   }
 
   restartGame() {
@@ -387,14 +386,14 @@ class HealthMillionaireGame {
     modalContent.innerHTML = `
       <div class="text-center mb-5">
         <div class="text-3xl mb-2">📊</div>
-        <h3 class="text-lg font-bold text-amber-400">Hasil Konsensus Rekan Nakes / Audiens</h3>
-        <p class="text-xs text-slate-400">Distribusi persentase jawaban dari 100 tenaga kesehatan & audiens</p>
+        <h3 class="text-lg font-bold text-amber-400">Clinical Consensus / Colleague Poll</h3>
+        <p class="text-xs text-slate-400">Percentage distribution from a survey of 100 healthcare professionals & peers</p>
       </div>
       <div class="space-y-3">
         ${["A", "B", "C", "D"].map((letter, i) => `
           <div>
             <div class="flex justify-between text-xs font-semibold mb-1">
-              <span class="text-slate-200">Opsi (${letter})</span>
+              <span class="text-slate-200">Option (${letter})</span>
               <span class="${i === correct ? 'text-emerald-400 font-bold' : 'text-slate-400'}">${pcts[i]}%</span>
             </div>
             <div class="w-full bg-slate-800 rounded-full h-3.5 overflow-hidden border border-slate-700">
@@ -423,13 +422,13 @@ class HealthMillionaireGame {
     modalContent.innerHTML = `
       <div class="text-center mb-4">
         <div class="text-4xl mb-2">${specialist.avatar}</div>
-        <h3 class="text-base font-bold text-emerald-400">Telepon Konsultasi Spesialis Medis</h3>
+        <h3 class="text-base font-bold text-emerald-400">Tele-Consultation: Medical Specialist</h3>
         <p class="text-xs text-amber-400 font-semibold">${specialist.name}</p>
       </div>
       <div class="bg-slate-900/90 border border-slate-700 p-4 rounded-xl text-slate-200 text-sm leading-relaxed shadow-inner">
         <p class="italic">"${advice}"</p>
       </div>
-      <p class="text-[11px] text-slate-500 text-center mt-3">*Petunjuk ini merupakan opini klinis dan keputusan akhir tetap di tangan Anda.</p>
+      <p class="text-[11px] text-slate-500 text-center mt-3">*This advice reflects the specialist's clinical opinion; the final lock decision rests solely with you.</p>
     `;
 
     this.lifelineModal.classList.remove("hidden");
@@ -452,13 +451,13 @@ class HealthMillionaireGame {
   }
 
   triggerConfetti() {
-    // Canvas confetti celebration
-    const duration = 5 * 1000;
-    const end = Date.now() + duration;
-
-    (function frame() {
-      // Simple particle shower if canvas is present
-    })();
+    if (typeof confetti === "function") {
+      confetti({
+        particleCount: 120,
+        spread: 80,
+        origin: { y: 0.6 }
+      });
+    }
   }
 }
 

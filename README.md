@@ -1,82 +1,86 @@
-# HealthQuizbyOSEE 🩺💰
-> **Interactive Medical & Pharmacy Trivia Game by OSEE**  
-> Direkayasa balik (*reverse engineered*) dan diadaptasi dari mekanik game show legendaris *Who Wants to Be a Millionaire* (CrazyGames) ke dalam domain **Ilmu Kesehatan, Farmasi, Kedokteran, dan Regulasi BPOM/CDOB**.
+# EnglishHealthQuizbyOSEE 🩺💰
+> **Interactive Medical & Pharmacy Trivia Game by OSEE.CO.ID**  
+> Reverse engineered and adapted from the legendary TV game show mechanics of *Who Wants to Be a Millionaire* (CrazyGames) specifically tailored for **Medical Sciences, Clinical Pharmacy, Pharmacology, and Good Distribution Practice (GDP) Regulations**.
 
-![HealthQuizbyOSEE Banner](https://img.shields.io/badge/HealthQuizbyOSEE-Farmasi%20%26%20Kesehatan-blue?style=for-the-badge&logo=medscape)
+![EnglishHealthQuizbyOSEE Banner](https://img.shields.io/badge/EnglishHealthQuizbyOSEE-Medical%20%26%20Pharmacy-blue?style=for-the-badge&logo=medscape)
 ![Tech Stack](https://img.shields.io/badge/Stack-HTML5%20%7C%20TailwindCSS%20%7C%20WebAudioAPI-amber?style=for-the-badge)
 ![Status](https://img.shields.io/badge/Offline-100%25%20Zero%20Dependencies-emerald?style=for-the-badge)
+![Brand](https://img.shields.io/badge/Powered%20By-osee.co.id-orange?style=for-the-badge)
 
 ---
 
-## 🌟 Fitur Utama & Core Game Mechanics
+## 🌟 Core Game Features & Mechanics
 
-Game ini dirancang dengan standar atmosfer studio kuis televisi yang imersif dan ketegangan intelektual tingkat tinggi:
+Engineered to deliver an authentic TV-studio suspense atmosphere with rigorous educational rigor:
 
-### 1. 🪜 15 Tangga Soal Berjenjang (Rp 100.000 s/d Rp 1.000.000.000)
-Tingkat kesulitan soal disusun secara ilmiah oleh kurikulum kefarmasian dan medis:
-- **Level 1 – 5 (Taraf Dasar - Edukasi Masyarakat & Pola Hidup Sehat)**: Hidrasi, nutrisi, vitamin larut lemak/air, pertolongan pertama luka bakar/terkilir (R.I.C.E), tanda vital, dan gerakan DAGUSIBU Kemenkes.
-- **Level 6 – 10 (Taraf Menengah - Farmasi Praktis & Penyakit Tropis)**: Penggolongan logo obat BPOM (Hijau, Biru P.No.1-6, Merah K), terminologi resep Latin (*a.c., p.c., p.r.n.*), bahaya resistensi antibiotik (AMR), interaksi khelasi kalsium/antasida, serta patofisiologi DBD/Diabetes.
-- **Level 11 – 15 (Taraf Mahir - Farmakologi Klinis & Regulasi CDOB/BPOM)**: Standar Rantai Dingin (*Cold Chain 2°C s/d 8°C*) PerBPOM CDOB, antidotum spesifik (N-Asetilsistein, Nalokson), bioavailabilitas & enzim CYP3A4, mekanisme batuk kering ACEI bradikinin, hingga antibodi monoklonal HER2 (Trastuzumab) dan kinetika eliminasi orde nol.
+### 1. 🪜 15 Progressive Tiers (Rp 100,000 to Rp 1,000,000,000)
+Question difficulty is systematically stratified according to medical and pharmaceutical curricula:
+- **Tiers 1 – 5 (Foundation - Public Health & Wellness)**: Hydration, nutritional biochemistry, fat vs water-soluble vitamins, acute first aid (R.I.C.E.), vital sign benchmarks (SpO2, pulse), and safe household drug disposal.
+- **Tiers 6 – 10 (Intermediate - Practical Pharmacotherapy & Clinical Pathology)**: Pharmaceutical OTC/POM regulatory scheduling symbols, Latin prescription abbreviations (*p.c., a.c., p.r.n.*), Antimicrobial Resistance (AMR), multivalent metal cation chelation, Dengue vector bionomics, and fasting plasma glucose diagnostic cutoffs.
+- **Tiers 11 – 15 (Advanced - Clinical Pharmacology & GDP Regulations)**: Good Distribution Practice (GDP) cold chain validation (+2°C to +8°C) and Vaccine Vial Monitors (VVM), specific antidotes (N-Acetylcysteine for acetaminophen, Naloxone for opioids), clinical bioavailability & CYP3A4 interactions, ACEI bradykinin dry cough, and recombinant monoclonal antibodies targeting HER2 (Trastuzumab).
 
-### 2. 🛡️ 2 Checkpoint Titik Aman (Safe Havens)
-- **Level 5**: Mengunci hadiah aman **Rp 1.000.000**.
-- **Level 10**: Mengunci hadiah aman **Rp 32.000.000**.
-- Jika pemain gagal di level tinggi, hadiah tidak hangus total, melainkan pemain berhak membawa pulang hadiah aman pada checkpoint terakhir yang telah dilalui.
+### 2. 🛡️ 2 Guaranteed Safe Havens
+- **Tier 5**: Locks in guaranteed prize of **Rp 1,000,000**.
+- **Tier 10**: Locks in guaranteed prize of **Rp 32,000,000**.
+- If a player falters at higher tiers, accumulated winnings never drop to zero; the player takes home the prize from the last cleared safe haven.
 
-### 3. 🩺 4 Alat Bantuan Medis Tematik (Health Lifelines)
-- 🧪 **50:50 (Uji Lab Eliminasi)**: Sistem otomatis membuang 2 jawaban salah (*distractor*).
-- 📊 **Konsensus Nakes (Audience Poll)**: Memunculkan modal dialog grafik batang dinamis persentase voting 100 rekan tenaga kesehatan.
-- 🩺 **Telepon Spesialis (Expert Consultation)**: Menghubungi praktisi ahli (**Apt. Budiarto, S.Farm.** atau **dr. Farhan, Sp.A**) yang memberikan analisis rasional dan persentase keyakinan klinis.
-- 🔄 **Rujuk Kasus (Switch Question)**: Mengganti soal sulit dengan studi kasus cadangan pada tingkat hadiah yang sama.
+### 3. 🩺 4 Thematic Clinical Lifelines
+- 🧪 **50:50 (Lab Elimination)**: Automatically purges 2 incorrect clinical distractor choices.
+- 📊 **Colleague Consensus (Peer Poll)**: Displays dynamic bar charts reflecting voting percentages from a simulated panel of 100 healthcare practitioners.
+- 🩺 **Specialist Consult (Tele-Consultation)**: Consult recognized clinicians (**Pharmacist Budiarto, B.Pharm.** or **Dr. Farhan, Pediatrician**) who provide rationale and clinical confidence levels.
+- 🔄 **Case Referral (Switch Question)**: Swaps out an intractable question for an alternate clinical case at the exact same tier value.
 
-### 4. 🔊 Synthetic Web Audio Engine (100% Offline Tanpa MP3)
-Dilengkapi synthesizer audio murni berbasis browser **Web Audio API**:
-- *Tension Drone* (nada bass atmosfer studio yang berdenyut).
-- *Heartbeat Timer Tick* (detak waktu yang semakin cepat di 10 detik terakhir).
-- *Answer Lock Suspense* (nada kunci jawaban).
-- *Correct Fanfare* & *Wrong Buzzer*.
+### 4. 🔊 Synthetic Audio Engine (Web Audio API)
+- 100% pure client-side mathematical sound synthesis using HTML5 Web Audio API oscillators and gain nodes.
+- Produces cinematic tension drone, urgent heartbeat ticks, answer lock-in clangs, fanfare chords, and buzzer SFX without any external MP3 files.
+- Operates 100% offline with zero latency and zero CORS complications.
 
-### 5. 💡 Clinical Pearl & Educational Feedback
-Setiap kali menjawab benar atau salah, game menyajikan kartu penjelasan ilmiah (*Clinical Pearl*) yang memperkaya wawasan medis pemain secara interaktif.
+### 5. 💡 Clinical Pearl Educational Insights
+- Every round presents an evidence-based clinical pearl detailing the pathophysiology, pharmacodynamics, and relevant regulatory literature (WHO, CDC, FDA, USP).
 
 ---
 
-## 📁 Struktur Berkas Proyek
+## 📂 Project Architecture
 
-```text
+```
 E:\Belajar GitHub\health-millionaire-quiz\
-│
-├── index.html          # Antarmuka studio kuis responsif (Tailwind CSS)
-├── css/
-│   └── style.css       # Efek visual lozenge button, lighting studio, pulse ladder
-├── js/
-│   ├── audio.js        # Engine Web Audio API (efek suara sintetis 100% offline)
-│   ├── questions.js    # Bank soal 15 level (Primary & Alternate Switch Cases)
-│   └── game.js         # State controller, timer 45s, lifelines, scoring logic
-└── README.md           # Dokumentasi teknis & panduan bermain
+├── index.html            # Main game layout, OSEE branding, and interactive modals
+├── assets\
+│   ├── logo_osee.png     # Official high-resolution OSEE logo
+│   └── logo_osee_web.png # Transparent web banner logo of osee.co.id
+├── css\
+│   └── style.css         # TV studio stage lighting, lozenge buttons, and animations
+├── js\
+│   ├── audio.js          # Web Audio API procedural sound engine
+│   ├── questions.js      # 30 Curated clinical questions (15 primary + 15 alternates)
+│   └── game.js           # Core state machine, countdown timer, lifelines, and modals
+└── README.md             # Project documentation and deployment guide
 ```
 
 ---
 
-## 🚀 Cara Menjalankan Game
+## 🚀 How to Run Locally & Deploy
 
-1. **Cara Langsung (1-Klik)**:
-   - Cukup buka file `index.html` dengan peramban apa pun (Google Chrome, Microsoft Edge, Firefox, Safari).
-   - Klik **"MULAI TANTANGAN SEKARANG"**.
+### Run on Localhost:
+1. Open PowerShell and start a local HTTP server:
+   ```bash
+   cd "E:\Belajar GitHub\health-millionaire-quiz"
+   python -m http.server 8080
+   ```
+2. Navigate in any browser to:
+   **`http://localhost:8080`**
 
-2. **Deploy ke GitHub Pages**:
-   - Inisialisasi git dan push ke repository GitHub:
-     ```bash
-     git init
-     git add .
-     git commit -m "feat: release HealthQuizbyOSEE interactive trivia game"
-     git branch -M main
-     git remote add origin https://github.com/USERNAME/health-millionaire-quiz.git
-     git push -u origin main
-     ```
-   - Masuk ke menu **Settings** -> **Pages** -> pilih branch `main` -> Save.
-   - Game dapat langsung diakses publik secara online!
+### Deploy to GitHub Pages:
+1. Push to your GitHub repository:
+   ```bash
+   git add .
+   git commit -m "feat: release EnglishHealthQuizbyOSEE interactive trivia game"
+   git branch -M main
+   git remote add origin https://github.com/USERNAME/EnglishHealthQuizbyOSEE.git
+   git push -u origin main
+   ```
+2. In the repository settings on GitHub, navigate to **Settings** -> **Pages**, set source branch to `main`, and click **Save**.
 
 ---
 
-*Dikembangkan untuk edukasi dan pengayaan wawasan kefarmasian & kesehatan berkelanjutan.*
+*Designed and engineered by OSEE (osee.co.id) for global medical, pharmacy, and healthcare continuing education.*
