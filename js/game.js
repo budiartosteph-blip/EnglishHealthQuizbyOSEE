@@ -1,5 +1,5 @@
 /**
- * HEALTH MILLIONAIRE QUIZ - GAMEPLAY CONTROLLER
+ * HEALTHQUIZBYOSEE - GAMEPLAY CONTROLLER
  * Manages game state, timer, lifelines, scoring, and UI animations.
  */
 

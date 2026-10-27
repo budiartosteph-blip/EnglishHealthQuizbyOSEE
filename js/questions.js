@@ -1,5 +1,5 @@
 /**
- * HEALTH MILLIONAIRE QUIZ - QUESTION BANK
+ * HEALTHQUIZBYOSEE - QUESTION BANK
  * Curated and clinically structured questions spanning 15 levels.
  * Each level contains:
  * - primary: main question

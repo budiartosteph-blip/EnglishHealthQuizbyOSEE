@@ -1,5 +1,5 @@
 /**
- * HEALTH MILLIONAIRE QUIZ - WEB AUDIO API SOUND ENGINE
+ * HEALTHQUIZBYOSEE - WEB AUDIO API SOUND ENGINE
  * Pure client-side synthetic audio synthesis. Zero external asset dependencies.
  * 100% offline compatible, responsive, and cross-browser.
  */

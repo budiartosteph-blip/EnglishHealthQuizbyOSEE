@@ -1,8 +1,8 @@
-# Who Wants to Be a Health Millionaire? 🩺💰
-> **Interactive Medical & Pharmacy Trivia Game**  
+# HealthQuizbyOSEE 🩺💰
+> **Interactive Medical & Pharmacy Trivia Game by OSEE**  
 > Direkayasa balik (*reverse engineered*) dan diadaptasi dari mekanik game show legendaris *Who Wants to Be a Millionaire* (CrazyGames) ke dalam domain **Ilmu Kesehatan, Farmasi, Kedokteran, dan Regulasi BPOM/CDOB**.
 
-![Health Millionaire Banner](https://img.shields.io/badge/Domain-Farmasi%20%26%20Kesehatan-blue?style=for-the-badge&logo=medscape)
+![HealthQuizbyOSEE Banner](https://img.shields.io/badge/HealthQuizbyOSEE-Farmasi%20%26%20Kesehatan-blue?style=for-the-badge&logo=medscape)
 ![Tech Stack](https://img.shields.io/badge/Stack-HTML5%20%7C%20TailwindCSS%20%7C%20WebAudioAPI-amber?style=for-the-badge)
 ![Status](https://img.shields.io/badge/Offline-100%25%20Zero%20Dependencies-emerald?style=for-the-badge)
 
@@ -69,7 +69,7 @@ E:\Belajar GitHub\health-millionaire-quiz\
      ```bash
      git init
      git add .
-     git commit -m "feat: initial release Who Wants to Be a Health Millionaire"
+     git commit -m "feat: release HealthQuizbyOSEE interactive trivia game"
      git branch -M main
      git remote add origin https://github.com/USERNAME/health-millionaire-quiz.git
      git push -u origin main
