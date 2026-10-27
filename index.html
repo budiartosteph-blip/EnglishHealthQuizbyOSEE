@@ -20,12 +20,20 @@
       theme: {
         extend: {
           colors: {
-            studio: {
-              900: '#050814',
-              800: '#0A1128',
-              700: '#132247',
-              600: '#1D3574',
-              border: '#1E3A8A'
+            osee: {
+              DEFAULT: '#0036AD',
+              50: '#EEF4FF',
+              100: '#E0EBFF',
+              200: '#C7D9FE',
+              300: '#9EBEFD',
+              400: '#6999FB',
+              500: '#3D71F6',
+              600: '#0036AD',
+              700: '#0B2B85',
+              800: '#061952',
+              900: '#030E30',
+              950: '#01081C',
+              orange: '#FA6C11'
             }
           }
         }
@@ -36,30 +44,30 @@
 <body class="studio-spotlight min-h-screen flex flex-col justify-between selection:bg-amber-500 selection:text-black text-slate-100 font-sans">
 
   <!-- ================= TOP NAVIGATION BAR ================= -->
-  <header class="w-full border-b border-blue-900/40 bg-slate-950/85 backdrop-blur-md sticky top-0 z-40 px-4 py-3">
+  <header class="w-full border-b border-[#1D5CFA]/30 bg-[#04123E]/90 backdrop-blur-md sticky top-0 z-40 px-4 py-3">
     <div class="max-w-7xl mx-auto flex items-center justify-between">
       
       <!-- Brand & OSEE Logo -->
       <div class="flex items-center gap-3">
         <a href="https://osee.co.id" target="_blank" rel="noopener noreferrer" class="flex items-center group">
-          <div class="h-10 px-2.5 py-1 rounded-xl bg-slate-900/90 border border-blue-800/60 shadow-lg shadow-blue-500/20 flex items-center justify-center group-hover:border-amber-400/80 transition-all">
+          <div class="h-10 px-2.5 py-1 rounded-xl bg-[#030E30]/90 border border-[#1D5CFA]/50 shadow-lg shadow-[#0036AD]/30 flex items-center justify-center group-hover:border-amber-400/80 transition-all">
             <img src="assets/logo_osee_web.png" alt="OSEE.CO.ID Logo" class="h-6 md:h-7 w-auto object-contain">
           </div>
         </a>
-        <div class="border-l border-blue-800/50 pl-3">
+        <div class="border-l border-[#1D5CFA]/40 pl-3">
           <h1 class="text-sm md:text-base font-extrabold tracking-wider font-orbitron bg-gradient-to-r from-amber-300 via-yellow-200 to-amber-500 bg-clip-text text-transparent">
             EnglishHealthQuizbyOSEE
           </h1>
-          <p class="text-[10px] md:text-xs text-blue-300 font-medium">Medical & Clinical Pharmacy Challenge by OSEE.CO.ID</p>
+          <p class="text-[10px] md:text-xs text-blue-200 font-medium">Medical & Clinical Pharmacy Challenge by OSEE.CO.ID</p>
         </div>
       </div>
 
       <!-- Quick Actions -->
       <div class="flex items-center gap-2">
-        <button id="btn-mute" title="Mute/Unmute Audio" class="p-2 rounded-xl bg-slate-900/80 border border-slate-700/60 hover:border-slate-500 transition-all text-slate-300">
+        <button id="btn-mute" title="Mute/Unmute Audio" class="p-2 rounded-xl bg-[#030E30]/80 border border-[#1D5CFA]/40 hover:border-slate-400 transition-all text-slate-300">
           <svg class="w-5 h-5 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072M17.536 6.464a7 7 0 010 9.072M9 19V5l-4 4H1v6h4l4 4z"/></svg>
         </button>
-        <button id="btn-walk-away" title="Bank Your Accumulated Cash" class="text-xs px-3.5 py-2 rounded-xl bg-rose-950/60 border border-rose-800/60 text-rose-300 hover:bg-rose-900/70 hover:border-rose-500 font-semibold transition-all flex items-center gap-1.5">
+        <button id="btn-walk-away" title="Bank Your Accumulated Cash" class="text-xs px-3.5 py-2 rounded-xl bg-rose-950/70 border border-rose-800/70 text-rose-300 hover:bg-rose-900/80 hover:border-rose-500 font-semibold transition-all flex items-center gap-1.5 shadow-md">
           <span>🛑</span>
           <span class="hidden sm:inline">Bank Winnings</span>
         </button>
@@ -72,19 +80,19 @@
   <main class="flex-1 max-w-7xl w-full mx-auto p-4 md:p-6 flex flex-col justify-center">
     
     <!-- START / INTRO SCREEN -->
-    <div id="start-screen" class="max-w-3xl mx-auto w-full text-center py-8 px-6 rounded-3xl bg-slate-900/75 border border-blue-900/70 backdrop-blur-xl shadow-2xl relative overflow-hidden">
-      <div class="absolute -top-24 -left-24 w-60 h-60 bg-blue-600/20 rounded-full blur-3xl pointer-events-none"></div>
+    <div id="start-screen" class="max-w-3xl mx-auto w-full text-center py-8 px-6 rounded-3xl bg-[#061B52]/85 border border-[#1D5CFA]/50 backdrop-blur-xl shadow-2xl shadow-[#0036AD]/30 relative overflow-hidden">
+      <div class="absolute -top-24 -left-24 w-60 h-60 bg-[#1D5CFA]/25 rounded-full blur-3xl pointer-events-none"></div>
       <div class="absolute -bottom-24 -right-24 w-60 h-60 bg-amber-500/20 rounded-full blur-3xl pointer-events-none"></div>
 
       <!-- OSEE Logo Centerpiece -->
       <div class="mb-5 flex justify-center">
-        <div class="px-5 py-2.5 rounded-2xl bg-slate-950/90 border border-blue-800/80 shadow-2xl shadow-blue-500/20 inline-flex items-center gap-2">
+        <div class="px-5 py-2.5 rounded-2xl bg-[#020A24]/90 border border-[#1D5CFA]/60 shadow-2xl shadow-[#0036AD]/40 inline-flex items-center gap-2">
           <img src="assets/logo_osee_web.png" alt="OSEE.CO.ID" class="h-8 md:h-10 w-auto object-contain">
         </div>
       </div>
 
       <div class="w-16 h-16 mx-auto mb-4 rounded-2xl bg-gradient-to-tr from-amber-500 to-yellow-300 p-1 shadow-2xl shadow-amber-500/30 flex items-center justify-center animate-pulse">
-        <div class="w-full h-full bg-slate-950 rounded-[14px] flex items-center justify-center text-3xl">
+        <div class="w-full h-full bg-[#030E30] rounded-[14px] flex items-center justify-center text-3xl">
           🏆
         </div>
       </div>
@@ -92,26 +100,26 @@
       <h2 class="text-2xl md:text-4xl font-black font-orbitron text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-yellow-100 to-amber-400 mb-3 tracking-wide">
         ENGLISHHEALTHQUIZBYOSEE
       </h2>
-      <p class="text-sm md:text-base text-blue-200/90 max-w-xl mx-auto mb-8 leading-relaxed">
+      <p class="text-sm md:text-base text-blue-100/90 max-w-xl mx-auto mb-8 leading-relaxed">
         Test your medical knowledge, pharmacology expertise, clinical diagnostics, and healthcare regulations across 15 progressive tiers powered by <span class="text-amber-400 font-bold">osee.co.id</span> to reach the virtual grand prize of <span class="text-amber-400 font-bold">Rp 1,000,000,000</span>!
       </p>
 
       <!-- Key Mechanics Feature Grid -->
       <div class="grid grid-cols-1 sm:grid-cols-3 gap-3.5 mb-8 text-left">
-        <div class="p-3.5 rounded-2xl bg-slate-950/60 border border-blue-900/50">
+        <div class="p-3.5 rounded-2xl bg-[#030E30]/80 border border-[#1D5CFA]/30 shadow-md">
           <div class="text-xl mb-1.5">🪜</div>
           <h4 class="text-xs font-bold text-slate-100 mb-1">15 Progressive Tiers</h4>
-          <p class="text-[11px] text-slate-400">Spanning wellness, pharmacotherapy, CDOB/GDP cold chain, to targeted biologics.</p>
+          <p class="text-[11px] text-blue-200/80">Spanning wellness, pharmacotherapy, CDOB/GDP cold chain, to targeted biologics.</p>
         </div>
-        <div class="p-3.5 rounded-2xl bg-slate-950/60 border border-blue-900/50">
+        <div class="p-3.5 rounded-2xl bg-[#030E30]/80 border border-[#1D5CFA]/30 shadow-md">
           <div class="text-xl mb-1.5">🛡️</div>
           <h4 class="text-xs font-bold text-slate-100 mb-1">2 Safe Havens</h4>
-          <p class="text-[11px] text-slate-400">Lock guaranteed prizes at Tier 5 (Rp 1M) & Tier 10 (Rp 32M). Never walk away empty-handed!</p>
+          <p class="text-[11px] text-blue-200/80">Lock guaranteed prizes at Tier 5 (Rp 1M) & Tier 10 (Rp 32M). Never walk away empty-handed!</p>
         </div>
-        <div class="p-3.5 rounded-2xl bg-slate-950/60 border border-blue-900/50">
+        <div class="p-3.5 rounded-2xl bg-[#030E30]/80 border border-[#1D5CFA]/30 shadow-md">
           <div class="text-xl mb-1.5">🩺</div>
           <h4 class="text-xs font-bold text-slate-100 mb-1">4 Clinical Lifelines</h4>
-          <p class="text-[11px] text-slate-400">Use 50:50 Lab Elimination, Colleague Consensus, Specialist Consult, and Case Referral.</p>
+          <p class="text-[11px] text-blue-200/80">Use 50:50 Lab Elimination, Colleague Consensus, Specialist Consult, and Case Referral.</p>
         </div>
       </div>
 
@@ -127,15 +135,15 @@
       <div class="lg:col-span-8 flex flex-col justify-between gap-6">
 
         <!-- Top Dashboard Status Bar -->
-        <div class="flex items-center justify-between bg-slate-950/70 border border-blue-900/50 p-4 rounded-2xl backdrop-blur-md">
+        <div class="flex items-center justify-between bg-[#061B52]/80 border border-[#1D5CFA]/40 p-4 rounded-2xl backdrop-blur-md shadow-lg shadow-[#0036AD]/20">
           
           <!-- Category & Tier Prize -->
           <div>
-            <span id="category-badge" class="inline-block px-3 py-1 rounded-full bg-blue-950/80 border border-blue-500/40 text-[11px] font-semibold text-blue-300 uppercase tracking-wider mb-1">
+            <span id="category-badge" class="inline-block px-3 py-1 rounded-full bg-[#020A24] border border-[#1D5CFA]/50 text-[11px] font-semibold text-blue-200 uppercase tracking-wider mb-1">
               Clinical Category
             </span>
             <div class="flex items-center gap-2">
-              <span class="text-xs text-slate-400 font-medium">Question Value:</span>
+              <span class="text-xs text-blue-200/80 font-medium">Question Value:</span>
               <span id="current-prize-display" class="text-sm md:text-base font-orbitron font-extrabold text-amber-400 text-glow-gold">
                 Rp 100,000
               </span>
@@ -144,14 +152,14 @@
 
           <!-- Circular Suspense Countdown Timer -->
           <div class="flex items-center gap-3">
-            <div id="timer-circle" class="w-14 h-14 rounded-full border-2 border-cyan-400 flex items-center justify-center bg-slate-900/80 shadow-lg shadow-cyan-500/30 transition-all">
+            <div id="timer-circle" class="w-14 h-14 rounded-full border-2 border-cyan-400 flex items-center justify-center bg-[#020A24] shadow-lg shadow-cyan-500/30 transition-all">
               <span id="timer-display" class="text-2xl font-black font-orbitron text-cyan-300">45</span>
             </div>
           </div>
 
           <!-- Secured Safe Haven Money -->
           <div class="text-right">
-            <span class="text-[10px] uppercase font-semibold text-slate-400 block tracking-wider">Guaranteed Cash</span>
+            <span class="text-[10px] uppercase font-semibold text-blue-200/80 block tracking-wider">Guaranteed Cash</span>
             <span id="secured-prize-display" class="text-sm md:text-base font-orbitron font-bold text-emerald-400">
               Rp 0
             </span>
@@ -160,31 +168,31 @@
         </div>
 
         <!-- 4 Health Lifelines Bar -->
-        <div class="grid grid-cols-4 gap-2 md:gap-3 bg-slate-950/60 p-2.5 rounded-2xl border border-blue-900/40">
-          <button id="life-fifty" title="50:50 Lab Elimination (Removes 2 incorrect options)" class="py-2.5 px-2 rounded-xl bg-slate-900/90 border border-blue-700/60 hover:border-cyan-400 hover:bg-blue-900/40 transition-all flex flex-col items-center justify-center group">
+        <div class="grid grid-cols-4 gap-2 md:gap-3 bg-[#04123E]/80 p-2.5 rounded-2xl border border-[#1D5CFA]/30 shadow-md">
+          <button id="life-fifty" title="50:50 Lab Elimination (Removes 2 incorrect options)" class="py-2.5 px-2 rounded-xl bg-[#061B52]/90 border border-[#1D5CFA]/50 hover:border-cyan-400 hover:bg-[#0B2B85] transition-all flex flex-col items-center justify-center group shadow">
             <span class="text-lg md:text-xl group-hover:scale-110 transition-transform">🧪</span>
-            <span class="text-[10px] md:text-xs font-bold font-orbitron text-blue-200 mt-0.5">50:50</span>
+            <span class="text-[10px] md:text-xs font-bold font-orbitron text-blue-100 mt-0.5">50:50</span>
           </button>
           
-          <button id="life-audience" title="Colleague Consensus (Survey of 100 healthcare peers)" class="py-2.5 px-2 rounded-xl bg-slate-900/90 border border-blue-700/60 hover:border-cyan-400 hover:bg-blue-900/40 transition-all flex flex-col items-center justify-center group">
+          <button id="life-audience" title="Colleague Consensus (Survey of 100 healthcare peers)" class="py-2.5 px-2 rounded-xl bg-[#061B52]/90 border border-[#1D5CFA]/50 hover:border-cyan-400 hover:bg-[#0B2B85] transition-all flex flex-col items-center justify-center group shadow">
             <span class="text-lg md:text-xl group-hover:scale-110 transition-transform">📊</span>
-            <span class="text-[10px] md:text-xs font-bold font-orbitron text-blue-200 mt-0.5">CONSENSUS</span>
+            <span class="text-[10px] md:text-xs font-bold font-orbitron text-blue-100 mt-0.5">CONSENSUS</span>
           </button>
 
-          <button id="life-phone" title="Specialist Consult (Tele-consult Pharmacist or Physician)" class="py-2.5 px-2 rounded-xl bg-slate-900/90 border border-blue-700/60 hover:border-cyan-400 hover:bg-blue-900/40 transition-all flex flex-col items-center justify-center group">
+          <button id="life-phone" title="Specialist Consult (Tele-consult Pharmacist or Physician)" class="py-2.5 px-2 rounded-xl bg-[#061B52]/90 border border-[#1D5CFA]/50 hover:border-cyan-400 hover:bg-[#0B2B85] transition-all flex flex-col items-center justify-center group shadow">
             <span class="text-lg md:text-xl group-hover:scale-110 transition-transform">🩺</span>
-            <span class="text-[10px] md:text-xs font-bold font-orbitron text-blue-200 mt-0.5">SPECIALIST</span>
+            <span class="text-[10px] md:text-xs font-bold font-orbitron text-blue-100 mt-0.5">SPECIALIST</span>
           </button>
 
-          <button id="life-switch" title="Case Referral (Switch to an alternate case question)" class="py-2.5 px-2 rounded-xl bg-slate-900/90 border border-blue-700/60 hover:border-cyan-400 hover:bg-blue-900/40 transition-all flex flex-col items-center justify-center group">
+          <button id="life-switch" title="Case Referral (Switch to an alternate case question)" class="py-2.5 px-2 rounded-xl bg-[#061B52]/90 border border-[#1D5CFA]/50 hover:border-cyan-400 hover:bg-[#0B2B85] transition-all flex flex-col items-center justify-center group shadow">
             <span class="text-lg md:text-xl group-hover:scale-110 transition-transform">🔄</span>
-            <span class="text-[10px] md:text-xs font-bold font-orbitron text-blue-200 mt-0.5">REFERRAL</span>
+            <span class="text-[10px] md:text-xs font-bold font-orbitron text-blue-100 mt-0.5">REFERRAL</span>
           </button>
         </div>
 
         <!-- Central Question Display Box -->
-        <div class="relative p-6 md:p-8 rounded-3xl bg-gradient-to-b from-slate-900 via-blue-950/80 to-slate-900 border-2 border-blue-600/80 shadow-2xl shadow-blue-900/40 text-center flex items-center justify-center min-h-[140px] md:min-h-[180px]">
-          <p id="question-text" class="text-base md:text-xl font-bold text-slate-100 leading-relaxed max-w-2xl">
+        <div class="relative p-6 md:p-8 rounded-3xl bg-gradient-to-b from-[#0E359E] via-[#08216B] to-[#04123E] border-2 border-[#1D5CFA] shadow-2xl shadow-[#0036AD]/50 text-center flex items-center justify-center min-h-[140px] md:min-h-[180px]">
+          <p id="question-text" class="text-base md:text-xl font-bold text-white leading-relaxed max-w-2xl text-shadow">
             Loading clinical question...
           </p>
         </div>
@@ -200,10 +208,10 @@
       </div>
 
       <!-- RIGHT: PRIZE MONEY LADDER (4 Cols) -->
-      <div class="lg:col-span-4 bg-slate-950/80 border border-blue-900/60 rounded-3xl p-4 backdrop-blur-xl shadow-xl flex flex-col justify-between">
+      <div class="lg:col-span-4 bg-[#061B52]/85 border border-[#1D5CFA]/50 rounded-3xl p-4 backdrop-blur-xl shadow-xl shadow-[#0036AD]/25 flex flex-col justify-between">
         
-        <div class="flex items-center justify-between border-b border-blue-900/40 pb-3 mb-3">
-          <h3 class="text-xs font-bold font-orbitron tracking-wider text-slate-300 uppercase flex items-center gap-1.5">
+        <div class="flex items-center justify-between border-b border-[#1D5CFA]/30 pb-3 mb-3">
+          <h3 class="text-xs font-bold font-orbitron tracking-wider text-blue-200 uppercase flex items-center gap-1.5">
             <span>🪜</span> Ladder Hierarchy
           </h3>
           <span class="text-[10px] text-amber-400 font-semibold">★ = Safe Haven</span>
@@ -215,7 +223,7 @@
         </ul>
 
         <!-- Bottom Legend -->
-        <div class="mt-4 pt-3 border-t border-blue-900/30 flex items-center justify-between text-[11px] text-slate-400 font-medium">
+        <div class="mt-4 pt-3 border-t border-[#1D5CFA]/30 flex items-center justify-between text-[11px] text-blue-300 font-medium">
           <span>Safe Zone 1: Rp 1M</span>
           <span>Safe Zone 2: Rp 32M</span>
         </div>
@@ -229,20 +237,20 @@
   <!-- ================= MODALS & POP-UPS ================= -->
 
   <!-- 1. CLINICAL PEARL / EDUCATIONAL EXPLANATION MODAL -->
-  <div id="pearl-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-md">
-    <div class="max-w-lg w-full bg-slate-900 border border-emerald-500/60 rounded-3xl p-6 shadow-2xl shadow-emerald-500/20 text-center animate-in fade-in zoom-in duration-300">
+  <div id="pearl-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-[#01081C]/85 backdrop-blur-md">
+    <div class="max-w-lg w-full bg-[#051A4F] border border-emerald-500/70 rounded-3xl p-6 shadow-2xl shadow-emerald-500/20 text-center animate-in fade-in zoom-in duration-300">
       
-      <div class="w-14 h-14 mx-auto mb-3 rounded-2xl bg-emerald-950/80 border border-emerald-500/40 flex items-center justify-center text-3xl">
+      <div class="w-14 h-14 mx-auto mb-3 rounded-2xl bg-[#020A24] border border-emerald-500/50 flex items-center justify-center text-3xl">
         🎉
       </div>
 
-      <span id="pearl-level-badge" class="px-3 py-1 rounded-full bg-emerald-950 border border-emerald-500/40 text-emerald-300 font-orbitron font-bold text-xs uppercase tracking-wider inline-block mb-2">
+      <span id="pearl-level-badge" class="px-3 py-1 rounded-full bg-[#020A24] border border-emerald-500/50 text-emerald-300 font-orbitron font-bold text-xs uppercase tracking-wider inline-block mb-2">
         Tier Cleared
       </span>
 
       <h3 class="text-xl font-bold text-slate-100 mb-2">Spot On! Correct Answer!</h3>
       
-      <p id="pearl-explanation" class="text-xs md:text-sm text-slate-300 leading-relaxed mb-4 text-left bg-slate-950/60 p-3.5 rounded-xl border border-slate-800">
+      <p id="pearl-explanation" class="text-xs md:text-sm text-blue-100 leading-relaxed mb-4 text-left bg-[#020A24]/80 p-3.5 rounded-xl border border-blue-900/60">
         Medical explanation...
       </p>
 
@@ -263,42 +271,42 @@
   </div>
 
   <!-- 2. LIFELINE POPUP (Audience / Specialist) -->
-  <div id="lifeline-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-md">
-    <div class="max-w-md w-full bg-slate-900 border border-blue-500/50 rounded-3xl p-6 shadow-2xl shadow-blue-500/20 animate-in fade-in zoom-in duration-300">
+  <div id="lifeline-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-[#01081C]/85 backdrop-blur-md">
+    <div class="max-w-md w-full bg-[#051A4F] border border-[#1D5CFA]/70 rounded-3xl p-6 shadow-2xl shadow-[#0036AD]/40 animate-in fade-in zoom-in duration-300">
       
       <div id="lifeline-modal-content">
         <!-- Injected via JavaScript -->
       </div>
 
-      <button id="btn-close-lifeline" class="w-full mt-6 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold text-xs border border-slate-600 transition-colors">
+      <button id="btn-close-lifeline" class="w-full mt-6 py-2.5 rounded-xl bg-[#030E30] hover:bg-[#071C5A] text-blue-200 font-semibold text-xs border border-[#1D5CFA]/50 transition-colors">
         Close & Return to Question
       </button>
     </div>
   </div>
 
   <!-- 3. GAME OVER MODAL -->
-  <div id="game-over-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/85 backdrop-blur-md">
-    <div class="max-w-md w-full bg-slate-900 border border-rose-500/60 rounded-3xl p-6 shadow-2xl shadow-rose-500/20 text-center animate-in fade-in zoom-in duration-300">
+  <div id="game-over-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-[#01081C]/90 backdrop-blur-md">
+    <div class="max-w-md w-full bg-[#051A4F] border border-rose-500/70 rounded-3xl p-6 shadow-2xl shadow-rose-500/20 text-center animate-in fade-in zoom-in duration-300">
       
-      <div class="w-14 h-14 mx-auto mb-3 rounded-2xl bg-rose-950/80 border border-rose-500/40 flex items-center justify-center text-3xl">
+      <div class="w-14 h-14 mx-auto mb-3 rounded-2xl bg-[#020A24] border border-rose-500/50 flex items-center justify-center text-3xl">
         💔
       </div>
 
       <h3 class="text-xl font-black font-orbitron text-rose-400 mb-1">QUIZ CONCLUDED</h3>
-      <p id="gameover-reason" class="text-xs text-slate-400 mb-4">Your selected answer was incorrect.</p>
+      <p id="gameover-reason" class="text-xs text-blue-200 mb-4">Your selected answer was incorrect.</p>
 
-      <div class="bg-slate-950/80 border border-slate-800 p-4 rounded-2xl mb-4 text-left space-y-2">
+      <div class="bg-[#020A24]/90 border border-blue-900/60 p-4 rounded-2xl mb-4 text-left space-y-2">
         <div class="flex justify-between items-center text-xs">
-          <span class="text-slate-400">Take-Home Payout:</span>
+          <span class="text-blue-300">Take-Home Payout:</span>
           <span id="gameover-final-prize" class="font-orbitron font-extrabold text-amber-400 text-base">Rp 0</span>
         </div>
-        <div class="pt-2 border-t border-slate-800 text-xs text-slate-300">
+        <div class="pt-2 border-t border-blue-900/50 text-xs text-slate-300">
           <span class="text-emerald-400 font-bold block mb-1">Correct Answer:</span>
           <p id="gameover-correct-ans" class="font-semibold text-slate-100"></p>
         </div>
       </div>
 
-      <p id="gameover-explanation" class="text-[11px] text-slate-400 text-left mb-6 leading-relaxed bg-slate-950/40 p-3 rounded-xl border border-slate-800/80"></p>
+      <p id="gameover-explanation" class="text-[11px] text-blue-200/80 text-left mb-6 leading-relaxed bg-[#020A24]/60 p-3 rounded-xl border border-blue-900/50"></p>
 
       <button id="btn-restart" class="w-full font-orbitron font-bold py-3.5 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 text-white hover:brightness-110 shadow-lg shadow-blue-500/30 active:scale-95 transition-all">
         PLAY AGAIN FROM TIER 1 🔄
@@ -308,11 +316,11 @@
   </div>
 
   <!-- 4. GRAND PRIZE WIN MODAL (Rp 1 Billion) -->
-  <div id="win-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/90 backdrop-blur-lg">
-    <div class="max-w-lg w-full bg-gradient-to-b from-slate-900 to-slate-950 border-2 border-amber-400 rounded-3xl p-8 text-center shadow-2xl shadow-amber-500/40 animate-in fade-in zoom-in duration-500">
+  <div id="win-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-[#01081C]/92 backdrop-blur-lg">
+    <div class="max-w-lg w-full bg-gradient-to-b from-[#0E359E] via-[#08216B] to-[#030E30] border-2 border-amber-400 rounded-3xl p-8 text-center shadow-2xl shadow-amber-500/40 animate-in fade-in zoom-in duration-500">
       
       <div class="w-24 h-24 mx-auto mb-4 rounded-3xl bg-gradient-to-tr from-amber-500 via-yellow-300 to-amber-600 p-1 shadow-2xl shadow-amber-400/50 flex items-center justify-center animate-bounce">
-        <div class="w-full h-full bg-slate-950 rounded-[20px] flex items-center justify-center text-5xl">
+        <div class="w-full h-full bg-[#020A24] rounded-[20px] flex items-center justify-center text-5xl">
           👑
         </div>
       </div>
@@ -331,7 +339,7 @@
         </span>
       </div>
 
-      <p id="win-explanation" class="text-xs text-slate-300 leading-relaxed mb-6 bg-slate-950/60 p-3.5 rounded-xl border border-slate-800 text-left"></p>
+      <p id="win-explanation" class="text-xs text-slate-200 leading-relaxed mb-6 bg-[#020A24]/70 p-3.5 rounded-xl border border-blue-900/60 text-left"></p>
 
       <button id="btn-play-again-win" class="w-full font-orbitron font-bold py-4 rounded-2xl bg-gradient-to-r from-amber-400 via-yellow-300 to-amber-500 text-slate-950 hover:brightness-110 shadow-xl shadow-amber-500/40 active:scale-95 transition-all text-sm md:text-base">
         REPLAY QUIZ 🏆
@@ -341,10 +349,10 @@
   </div>
 
   <!-- Footer -->
-  <footer class="w-full border-t border-blue-900/30 py-4 text-center text-xs text-slate-500 bg-slate-950/50">
+  <footer class="w-full border-t border-[#1D5CFA]/25 py-4 text-center text-xs text-blue-300/70 bg-[#020A24]/90">
     <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between px-4 gap-2">
       <div class="flex items-center gap-2">
-        <img src="assets/logo_osee_web.png" alt="OSEE Logo" class="h-4 w-auto opacity-70">
+        <img src="assets/logo_osee_web.png" alt="OSEE Logo" class="h-4 w-auto opacity-80">
         <span>EnglishHealthQuizbyOSEE &copy; 2026</span>
       </div>
       <p>Powered by <a href="https://osee.co.id" target="_blank" rel="noopener noreferrer" class="text-amber-400 hover:underline font-semibold">osee.co.id</a> for Global Medical & Pharmaceutical Education.</p>
